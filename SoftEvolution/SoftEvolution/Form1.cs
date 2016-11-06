@@ -16,5 +16,11 @@ namespace SoftEvolution
         {
             InitializeComponent();
         }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            frmProveedores catalogo = new frmProveedores();
+            catalogo.Show();
+        }
     }
 }

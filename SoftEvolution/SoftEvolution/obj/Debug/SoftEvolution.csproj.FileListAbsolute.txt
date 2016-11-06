@@ -1,1 +1,15 @@
 c:\users\alumno\documents\visual studio 2015\Projects\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.exe.config
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.exe.config
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.exe
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.pdb
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.csprojResolveAssemblyReference.cache
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Form1.resources
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmModificar.resources
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmAgregar.resources
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmProveedores.resources
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Properties.Resources.resources
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.csproj.GenerateResource.Cache
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.exe
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.pdb
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\MySql.Data.dll
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\MySql.Data.xml
