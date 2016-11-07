@@ -33,8 +33,7 @@ create table Productos
     precio_venta_menudeo double,
     precio_venta_mayoreo double,
     precio_venta_instructor double,
-    bodega int,
-    imagen blob
+    cantidad int
 );
 
 create table Ventas
