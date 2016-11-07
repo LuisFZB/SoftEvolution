@@ -16,3 +16,6 @@ C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolu
 C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmAgregarProducto.resources
 C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmBuscarProducto.resources
 C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmModificarProducto.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.exe.config
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.exe
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.pdb
