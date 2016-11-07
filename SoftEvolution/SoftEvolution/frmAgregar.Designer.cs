@@ -45,7 +45,6 @@
             this.lblObservaciones = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -204,21 +203,11 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(372, 405);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "label2";
-            // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 472);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblObservaciones);
@@ -263,6 +252,5 @@
         public System.Windows.Forms.TextBox txtContacto;
         public System.Windows.Forms.TextBox txtApellido;
         public System.Windows.Forms.TextBox txtObservaciones;
-        public System.Windows.Forms.Label label2;
     }
 }

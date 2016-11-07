@@ -1,6 +1,6 @@
 ﻿namespace SoftEvolution
 {
-    partial class Form1
+    partial class Principal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnProveedores = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProveedores
@@ -41,11 +42,22 @@
             this.btnProveedores.UseVisualStyleBackColor = true;
             this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
+            // btnProductos
+            // 
+            this.btnProductos.Location = new System.Drawing.Point(151, 118);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(75, 23);
+            this.btnProductos.TabIndex = 1;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 301);
+            this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnProveedores);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -56,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnProveedores;
+        private System.Windows.Forms.Button btnProductos;
     }
 }
 

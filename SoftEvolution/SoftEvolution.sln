@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftEvolution", "SoftEvolution\SoftEvolution.csproj", "{7223A03B-25EE-4808-B008-2469BA338289}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0060A47B-8C20-48C6-9724-D9DB2FC39CD8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\FrmProductos\FrmProductos\clsConexion.cs = ..\..\..\FrmProductos\FrmProductos\clsConexion.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

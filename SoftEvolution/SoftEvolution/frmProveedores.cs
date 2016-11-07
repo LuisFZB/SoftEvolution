@@ -27,23 +27,31 @@ namespace SoftEvolution
         private void tlsModificar_Click(object sender, EventArgs e)
         {
             clsProveedores Proveedor = new clsProveedores();
-            //Proveedor.accion = true;
-
             Conexion con = new Conexion();
-            Proveedor.Codigo = Convert.ToInt32(this.dgvProveedores.CurrentRow.Cells[0].Value.ToString());
-            con.getProveedor();
-            con.buscarProveedor(ref Proveedor);
-            frmModificar x = new frmModificar();
-            //x.label2.Text = "True";
-            x.txtCodigo.Text = Proveedor.Codigo.ToString();
-            x.txtEmpresa.Text = Proveedor.NombreEmpresa;
-            x.txtTelefono.Text = Proveedor.TelefonoEmpresa;
-            x.txtEmail.Text = Proveedor.EmailEmpresa;
-            x.txtContacto.Text = Proveedor.NombreContacto;
-            x.txtApellido.Text = Proveedor.ApellidoContacto;
-            x.txtObservaciones.Text = Proveedor.Observaciones;
-            x.Show();
-            this.Dispose();
+            try
+            {
+                //Proveedor.accion = true;
+                
+                Proveedor.Codigo = Convert.ToInt32(this.dgvProveedores.CurrentRow.Cells[0].Value.ToString());
+
+                con.getProveedor();
+                con.buscarProveedor(ref Proveedor);
+                frmModificar x = new frmModificar();
+                //x.label2.Text = "True";
+                x.txtCodigo.Text = Proveedor.Codigo.ToString();
+                x.txtEmpresa.Text = Proveedor.NombreEmpresa;
+                x.txtTelefono.Text = Proveedor.TelefonoEmpresa;
+                x.txtEmail.Text = Proveedor.EmailEmpresa;
+                x.txtContacto.Text = Proveedor.NombreContacto;
+                x.txtApellido.Text = Proveedor.ApellidoContacto;
+                x.txtObservaciones.Text = Proveedor.Observaciones;
+                x.Show();
+                this.Dispose();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleciona un registro");
+            }
         }
 
         private void frmProveedores_Load(object sender, EventArgs e)
@@ -66,13 +74,20 @@ namespace SoftEvolution
 
         private void tlsEliminar_Click(object sender, EventArgs e)
         {
-            clsProveedores proveedor = new clsProveedores();
-            Conexion con = new Conexion();
-            proveedor.Codigo = Convert.ToInt32(dgvProveedores.Rows[dgvProveedores.SelectedRows[0].Index].Cells[0].Value.ToString());
-            MessageBox.Show("¿Deseas eliminar este proveedor?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            con.eliminar(proveedor);
-            ver();
-            MessageBox.Show("Producto eliminado");
+            try
+            {
+                clsProveedores proveedor = new clsProveedores();
+                Conexion con = new Conexion();
+                proveedor.Codigo = Convert.ToInt32(dgvProveedores.Rows[dgvProveedores.SelectedRows[0].Index].Cells[0].Value.ToString());
+                MessageBox.Show("¿Deseas eliminar este proveedor?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                con.eliminar(proveedor);
+                ver();
+                MessageBox.Show("Producto eliminado");
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Seleciona un registro");
+            }
         }
 
         private void txtBuscar_KeyUp(object sender, KeyEventArgs e)

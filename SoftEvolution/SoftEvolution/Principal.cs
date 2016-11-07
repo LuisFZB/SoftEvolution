@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SoftEvolution
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
         }
@@ -21,6 +21,12 @@ namespace SoftEvolution
         {
             frmProveedores catalogo = new frmProveedores();
             catalogo.Show();
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            frmProductos productos = new frmProductos();
+            productos.Show();
         }
     }
 }

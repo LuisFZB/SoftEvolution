@@ -47,13 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsConexion.cs" />
+    <Compile Include="clsDatosProducto.cs" />
+    <Compile Include="clsProductos.cs" />
     <Compile Include="clsProveedores.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarProducto.Designer.cs">
+      <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarProducto.Designer.cs">
+      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmModificar.cs">
       <SubType>Form</SubType>
@@ -67,6 +82,18 @@
     <Compile Include="frmAgregar.Designer.cs">
       <DependentUpon>frmAgregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificarProducto.Designer.cs">
+      <DependentUpon>FrmModificarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductos.designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,14 +102,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarProducto.resx">
+      <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarProducto.resx">
+      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModificar.resx">
       <DependentUpon>frmModificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregar.resx">
       <DependentUpon>frmAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificarProducto.resx">
+      <DependentUpon>FrmModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
