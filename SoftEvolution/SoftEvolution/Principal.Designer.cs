@@ -30,6 +30,7 @@
         {
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
+            this.Corte = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProveedores
@@ -52,14 +53,25 @@
             this.btnProductos.UseVisualStyleBackColor = true;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // Form1
+            // Corte
+            // 
+            this.Corte.Location = new System.Drawing.Point(151, 165);
+            this.Corte.Name = "Corte";
+            this.Corte.Size = new System.Drawing.Size(75, 23);
+            this.Corte.TabIndex = 2;
+            this.Corte.Text = "Corte";
+            this.Corte.UseVisualStyleBackColor = true;
+            this.Corte.Click += new System.EventHandler(this.Corte_Click);
+            // 
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 301);
+            this.Controls.Add(this.Corte);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnProveedores);
-            this.Name = "Form1";
+            this.Name = "Principal";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button Corte;
     }
 }
 

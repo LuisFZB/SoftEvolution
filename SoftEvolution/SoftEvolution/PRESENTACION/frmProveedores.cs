@@ -113,6 +113,11 @@ namespace SoftEvolution
             }
         }
 
+        private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         /*private void Buscar(string Folio)
         {
             

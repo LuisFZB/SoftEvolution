@@ -98,5 +98,10 @@ namespace SoftEvolution
         {
             this.Close(); 
         }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

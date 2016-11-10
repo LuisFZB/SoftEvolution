@@ -66,28 +66,28 @@
             // tlsAgregar
             // 
             this.tlsAgregar.Name = "tlsAgregar";
-            this.tlsAgregar.Size = new System.Drawing.Size(125, 22);
+            this.tlsAgregar.Size = new System.Drawing.Size(152, 22);
             this.tlsAgregar.Text = "Agregar";
             this.tlsAgregar.Click += new System.EventHandler(this.tlsAgregar_Click);
             // 
             // tlsModificar
             // 
             this.tlsModificar.Name = "tlsModificar";
-            this.tlsModificar.Size = new System.Drawing.Size(125, 22);
+            this.tlsModificar.Size = new System.Drawing.Size(152, 22);
             this.tlsModificar.Text = "Modificar";
             this.tlsModificar.Click += new System.EventHandler(this.tlsModificar_Click);
             // 
             // tlsEliminar
             // 
             this.tlsEliminar.Name = "tlsEliminar";
-            this.tlsEliminar.Size = new System.Drawing.Size(125, 22);
+            this.tlsEliminar.Size = new System.Drawing.Size(152, 22);
             this.tlsEliminar.Text = "Eliminar";
             this.tlsEliminar.Click += new System.EventHandler(this.tlsEliminar_Click);
             // 
             // tlsSalir
             // 
             this.tlsSalir.Name = "tlsSalir";
-            this.tlsSalir.Size = new System.Drawing.Size(125, 22);
+            this.tlsSalir.Size = new System.Drawing.Size(152, 22);
             this.tlsSalir.Text = "Salir";
             this.tlsSalir.Click += new System.EventHandler(this.tlsSalir_Click);
             // 
@@ -116,6 +116,7 @@
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.Size = new System.Drawing.Size(713, 327);
             this.dgvProveedores.TabIndex = 3;
+            this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
             // 
             // label1
             // 

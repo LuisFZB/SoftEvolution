@@ -19,3 +19,17 @@ C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\SoftEvolu
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.exe.config
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.exe
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.pdb
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.exe
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.pdb
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.csprojResolveAssemblyReference.cache
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Corte_de_caja.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Principal.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmAgregarProducto.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmBuscarProducto.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmModificar.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmAgregar.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmModificarProducto.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmProveedores.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Properties.Resources.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.csproj.GenerateResource.Cache
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmProductos.resources

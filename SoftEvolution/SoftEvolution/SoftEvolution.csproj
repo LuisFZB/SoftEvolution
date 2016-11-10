@@ -53,10 +53,10 @@
     <Compile Include="clsProductos.cs" />
     <Compile Include="clsProveedores.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="Corte de caja.cs">
+    <Compile Include="PRESENTACION\Corte de caja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Corte de caja.Designer.cs">
+    <Compile Include="PRESENTACION\Corte de caja.Designer.cs">
       <DependentUpon>Corte de caja.cs</DependentUpon>
     </Compile>
     <Compile Include="DAOCorte.cs" />
@@ -67,72 +67,75 @@
     <Compile Include="Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAgregarProducto.cs">
+    <Compile Include="PRESENTACION\FrmAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAgregarProducto.Designer.cs">
+    <Compile Include="PRESENTACION\FrmAgregarProducto.Designer.cs">
       <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBuscarProducto.cs">
+    <Compile Include="PRESENTACION\FrmBuscarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBuscarProducto.Designer.cs">
+    <Compile Include="PRESENTACION\FrmBuscarProducto.Designer.cs">
       <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmModificar.cs">
+    <Compile Include="PRESENTACION\frmModificar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmModificar.Designer.cs">
+    <Compile Include="PRESENTACION\frmModificar.Designer.cs">
       <DependentUpon>frmModificar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAgregar.cs">
+    <Compile Include="PRESENTACION\frmAgregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAgregar.Designer.cs">
+    <Compile Include="PRESENTACION\frmAgregar.Designer.cs">
       <DependentUpon>frmAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModificarProducto.cs">
+    <Compile Include="PRESENTACION\FrmModificarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModificarProducto.Designer.cs">
+    <Compile Include="PRESENTACION\FrmModificarProducto.Designer.cs">
       <DependentUpon>FrmModificarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProductos.cs">
+    <Compile Include="PRESENTACION\frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos.designer.cs">
+    <Compile Include="PRESENTACION\frmProductos.designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProveedores.cs">
+    <Compile Include="PRESENTACION\frmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProveedores.Designer.cs">
+    <Compile Include="PRESENTACION\frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Corte de caja.resx">
+    <EmbeddedResource Include="PRESENTACION\Corte de caja.resx">
       <DependentUpon>Corte de caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAgregarProducto.resx">
+    <EmbeddedResource Include="PRESENTACION\FrmAgregarProducto.resx">
       <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarProducto.resx">
+    <EmbeddedResource Include="PRESENTACION\FrmBuscarProducto.resx">
       <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmModificar.resx">
+    <EmbeddedResource Include="PRESENTACION\frmModificar.resx">
       <DependentUpon>frmModificar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAgregar.resx">
+    <EmbeddedResource Include="PRESENTACION\frmAgregar.resx">
       <DependentUpon>frmAgregar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModificarProducto.resx">
+    <EmbeddedResource Include="PRESENTACION\FrmModificarProducto.resx">
       <DependentUpon>FrmModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProveedores.resx">
+    <EmbeddedResource Include="PRESENTACION\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -157,6 +160,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DATOS\" />
+    <Folder Include="POJOS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

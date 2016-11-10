@@ -28,5 +28,11 @@ namespace SoftEvolution
             frmProductos productos = new frmProductos();
             productos.Show();
         }
+
+        private void Corte_Click(object sender, EventArgs e)
+        {
+            Corte_de_caja corte = new Corte_de_caja();
+            corte.Show();
+        }
     }
 }
