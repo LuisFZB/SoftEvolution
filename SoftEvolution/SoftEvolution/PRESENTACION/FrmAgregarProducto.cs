@@ -29,40 +29,7 @@ namespace SoftEvolution
             
             }
 
-        public void Agregar()
-        {
-            try
-            {
-                // CREA LOS OBJETOS
-                clsProductos objProducto = new clsProductos();
-                clsDatosProducto objDatos = new clsDatosProducto();
-
-                // LEE LOS DATOS DE LAS CAJAS Y LOS GUARDA EN EL OBJETO
-                objProducto.Codigo = txtCodi.Text;
-                objProducto.Producto = txtNom.Text;
-                objProducto.Marca = txtMar.Text;
-                objProducto.Categoria = txtCate.Text;
-                objProducto.Detalles = txtDescrip.Text;
-                objProducto.Precio_Compra = txtPC.Text;
-                objProducto.Precio_Venta_Menudeo = txtPV.Text;
-                objProducto.Precio_Venta_Mayoreo = txtPM.Text;
-                objProducto.Precio_Venta_Instructor = txtPE.Text;
-                objProducto.Cantidad = txtCantidad.Text;
-                // INSERTA AL PRODUCTO MEDIANTE EL MÉTODO
-                objDatos.AgregarProducto(objProducto);
-                // MUESTRA MENSAJE DE CONFIRMACION
-                MessageBox.Show("Producto registrado", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Dispose();
-                frmProductos prod = new frmProductos();
-                prod.Show();
-            }
-            catch
-            {
-                MessageBox.Show("***Llenar los campos***");
-
-            }
-        //}
-    }
+      
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -76,52 +43,78 @@ namespace SoftEvolution
 
         private void txtCodi_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 40) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
         }
 
         private void txtPC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
+            if (e.KeyChar == ',')
+                e.KeyChar = '.';
+            //Permitir comas y puntos (si es punto )
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+                //si ya hay una coma no permite un nuevo ingreso de esta
+                if (txtPC.Text.Contains(",") || txtPC.Text.Contains("."))
+                    e.Handled = true;
+                else
+                    e.Handled = false;
         }
 
         private void txtPV_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
+            if (e.KeyChar == ',')
+                e.KeyChar = '.';
+            //Permitir comas y puntos (si es punto )
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+                //si ya hay una coma no permite un nuevo ingreso de esta
+                if (txtPV.Text.Contains(",") || txtPV.Text.Contains("."))
+                    e.Handled = true;
+                else
+                    e.Handled = false;
         }
 
         private void txtPM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
+            if (e.KeyChar == ',')
+                e.KeyChar = '.';
+            //Permitir comas y puntos (si es punto )
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+                //si ya hay una coma no permite un nuevo ingreso de esta
+                if (txtPM.Text.Contains(",") || txtPM.Text.Contains("."))
+                    e.Handled = true;
+                else
+                    e.Handled = false;
         }
 
         private void txtPE_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
+            if (e.KeyChar == ',')
+                e.KeyChar = '.';
+            //Permitir comas y puntos (si es punto )
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+                //si ya hay una coma no permite un nuevo ingreso de esta
+                if (txtPE.Text.Contains(",") || txtPE.Text.Contains("."))
+                    e.Handled = true;
+                else
+                    e.Handled = false;
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
@@ -172,6 +165,59 @@ namespace SoftEvolution
             }
             else
                 e.Handled = false;
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Agregar();
+        }
+
+        private void cancelarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmProductos prod = new frmProductos();
+            prod.Show();
+        }
+
+        public void Agregar()
+        {
+            
+                try
+                {
+                    // CREA LOS OBJETOS
+                    clsProductos objProducto = new clsProductos();
+                    clsDatosProducto objDatos = new clsDatosProducto();
+
+                    // LEE LOS DATOS DE LAS CAJAS Y LOS GUARDA EN EL OBJETO
+                    objProducto.Codigo = Convert.ToInt32(txtCodi.Text);
+                    objProducto.Producto = txtNom.Text;
+                    objProducto.Marca = txtMar.Text;
+                    objProducto.Categoria = txtCate.Text;
+                    objProducto.Detalles = txtDescrip.Text;
+                    objProducto.Precio_Compra = Convert.ToDouble(txtPC.Text);
+                    objProducto.Precio_Venta_Menudeo = Convert.ToDouble(txtPV.Text);
+                    objProducto.Precio_Venta_Mayoreo = Convert.ToDouble(txtPM.Text);
+                    objProducto.Precio_Venta_Instructor = Convert.ToDouble(txtPE.Text);
+                    objProducto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    // INSERTA AL PRODUCTO MEDIANTE EL MÉTODO
+                    objDatos.AgregarProducto(objProducto);
+                    // MUESTRA MENSAJE DE CONFIRMACION
+                    MessageBox.Show("Producto registrado", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Dispose();
+                    frmProductos prod = new frmProductos();
+                    prod.Show();
+                }
+
+            catch(MySqlException) {
+                MessageBox.Show("***Este producto ya existe***");
+
+            }
+            catch
+            {
+                MessageBox.Show("***Llenar los campos***");
+
+            }
+            //}
         }
     }
 }

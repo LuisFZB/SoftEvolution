@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btncan = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,27 +50,12 @@
             this.txtPE = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtDescrip = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancerlarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btncan
-            // 
-            this.btncan.Location = new System.Drawing.Point(293, 183);
-            this.btncan.Name = "btncan";
-            this.btncan.Size = new System.Drawing.Size(109, 56);
-            this.btncan.TabIndex = 43;
-            this.btncan.Text = "Cancelar";
-            this.btncan.UseVisualStyleBackColor = true;
-            this.btncan.Click += new System.EventHandler(this.btncan_Click);
-            // 
-            // btnsave
-            // 
-            this.btnsave.Location = new System.Drawing.Point(293, 113);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(109, 56);
-            this.btnsave.TabIndex = 42;
-            this.btnsave.Text = "Guardar";
-            this.btnsave.UseVisualStyleBackColor = true;
-            this.btnsave.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
@@ -168,7 +151,7 @@
             // 
             this.Tipo.AutoSize = true;
             this.Tipo.Enabled = false;
-            this.Tipo.Location = new System.Drawing.Point(39, 9);
+            this.Tipo.Location = new System.Drawing.Point(290, 45);
             this.Tipo.Name = "Tipo";
             this.Tipo.Size = new System.Drawing.Size(41, 13);
             this.Tipo.TabIndex = 44;
@@ -178,7 +161,7 @@
             // 
             this.Buscar.AutoSize = true;
             this.Buscar.Enabled = false;
-            this.Buscar.Location = new System.Drawing.Point(105, 9);
+            this.Buscar.Location = new System.Drawing.Point(361, 45);
             this.Buscar.Name = "Buscar";
             this.Buscar.Size = new System.Drawing.Size(41, 13);
             this.Buscar.TabIndex = 45;
@@ -265,11 +248,45 @@
             this.txtDescrip.TabIndex = 55;
             this.txtDescrip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescrip_KeyPress);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(431, 25);
+            this.toolStrip1.TabIndex = 56;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.guardarToolStripMenuItem,
+            this.cancerlarToolStripMenuItem});
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(61, 22);
+            this.toolStripLabel1.Text = "Archivo";
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.guardarToolStripMenuItem.Text = "Guardar";
+            this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
+            // 
+            // cancerlarToolStripMenuItem
+            // 
+            this.cancerlarToolStripMenuItem.Name = "cancerlarToolStripMenuItem";
+            this.cancerlarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cancerlarToolStripMenuItem.Text = "Cancerlar";
+            this.cancerlarToolStripMenuItem.Click += new System.EventHandler(this.cancerlarToolStripMenuItem_Click);
+            // 
             // FrmModificarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(431, 442);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtDescrip);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtPE);
@@ -282,8 +299,6 @@
             this.Controls.Add(this.txtCodi);
             this.Controls.Add(this.Buscar);
             this.Controls.Add(this.Tipo);
-            this.Controls.Add(this.btncan);
-            this.Controls.Add(this.btnsave);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -299,15 +314,14 @@
             this.Name = "FrmModificarProducto";
             this.Text = "FrmModificarProducto";
             this.Load += new System.EventHandler(this.FrmModificarProducto_Load);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btncan;
-        private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -330,5 +344,9 @@
         private System.Windows.Forms.TextBox txtPE;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtDescrip;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripLabel1;
+        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancerlarToolStripMenuItem;
     }
 }

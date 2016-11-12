@@ -111,5 +111,10 @@ namespace SoftEvolution
 
             }*/
         }
+
+        private void frmModificar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

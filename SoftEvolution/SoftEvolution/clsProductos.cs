@@ -7,29 +7,22 @@ using MySql.Data.MySqlClient;
 using System.Data;
 
 namespace SoftEvolution
-{
+{//declarion de los getters y setters
     class clsProductos
     {
-        private string pCodigo;
+        private int pCodigo;
         private string pProducto;
         private string pMarca;
         private string pCategoria;
         private string pDetalles;
-        private string pPrecio_Compra;
-        private string pPrecio_Venta_Menudeo;
-        private string pPrecio_Venta_Mayoreo;
-        private string pPrecio_Venta_Instructor;
-        private string pCantidad;
+        private double pPrecio_Compra;
+        private double pPrecio_Venta_Menudeo;
+        private double pPrecio_Venta_Mayoreo;
+        private double pPrecio_Venta_Instructor;
+        private int pCantidad;
 
-        public static MySqlConnection ObtenerConexion()
-        {
-            MySqlConnection conectar = new MySqlConnection("SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=" + "evolutiongym" + ";UID=" + "root" + ";PWD=" + "1234");
 
-            conectar.Open();
-            return conectar;
-        }
-
-        public string Codigo
+        public int Codigo
         {
             get
             {
@@ -86,7 +79,7 @@ namespace SoftEvolution
                 pDetalles = value;
             }
         }
-        public string Precio_Compra
+        public double Precio_Compra
         {
             get
             {
@@ -98,7 +91,7 @@ namespace SoftEvolution
             }
         }
 
-        public string Precio_Venta_Menudeo
+        public double Precio_Venta_Menudeo
         {
             get
             {
@@ -110,7 +103,7 @@ namespace SoftEvolution
             }
         }
 
-        public string Precio_Venta_Mayoreo
+        public double Precio_Venta_Mayoreo
         {
             get
             {
@@ -123,7 +116,7 @@ namespace SoftEvolution
             }
         }
 
-        public string Precio_Venta_Instructor
+        public double Precio_Venta_Instructor
         {
             get
             {
@@ -135,7 +128,7 @@ namespace SoftEvolution
             }
         }
 
-        public string Cantidad
+        public int Cantidad
         {
             get
             {

@@ -18,61 +18,10 @@ namespace SoftEvolution
         }
         int s;
         clsDatosProducto datos = new clsDatosProducto();
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (s == 1)
-            {
-                clsProductos producto = new clsProductos();
-                producto.Codigo = txtCodi.Text;
-                producto.Producto = txtNom.Text;
-                producto.Marca = txtMar.Text;
-                producto.Categoria = txtDescrip.Text;
-                producto.Detalles = txtDescrip.Text;
-                producto.Precio_Compra = txtPC.Text;
-                producto.Precio_Venta_Menudeo = txtPV.Text;
-                producto.Precio_Venta_Mayoreo = txtPM.Text;
-                producto.Precio_Venta_Instructor = txtPE.Text;
-                producto.Cantidad = txtCantidad.Text;
-                if (!txtCodi.Text.Equals("") || !txtNom.Text.Equals(""))
-                {
-                    datos.AgregarProducto(producto);
-                    new frmProductos().Show();
-                    this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("Llene los campos obligatorios");
-                }
-            }
-            else if (s == 3)
-            {
-                clsProductos producto = new clsProductos();
-                producto.Codigo = txtCodi.Text;
-                producto.Producto = txtNom.Text;
-                producto.Marca = txtMar.Text;
-                producto.Categoria = txtDescrip.Text;
-                producto.Detalles = txtDescrip.Text;
-                producto.Precio_Compra = txtPC.Text;
-                producto.Precio_Venta_Menudeo = txtPV.Text;
-                producto.Precio_Venta_Mayoreo = txtPM.Text;
-                producto.Precio_Venta_Instructor = txtPE.Text;
-                producto.Cantidad = txtCantidad.Text;
-                if (!txtCodi.Text.Equals("") || !txtNom.Text.Equals(""))
-                {
-                    datos.ModificarProducto(producto);
-                    new frmProductos().Show();
-                    this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("Llene los campos obligatorios");
-                }
-            }
-        }
+      
 
         private void FrmModificarProducto_Load(object sender, EventArgs e)
         {
-
             if (Tipo.Text.Equals("Agregar"))
             {
                 s = 1;
@@ -80,8 +29,8 @@ namespace SoftEvolution
             else if (Tipo.Text.Equals("Buscar"))
             {
                 s = 2;
-                btnsave.Visible = false;
-                btncan.Text = "Salir";
+                guardarToolStripMenuItem.Visible = false;
+                cancerlarToolStripMenuItem.Text = "Salir";
                 txtCodi.Enabled = false;
                 txtNom.Enabled = false;
                 txtMar.Enabled = false;
@@ -95,16 +44,16 @@ namespace SoftEvolution
                 clsProductos producto = datos.getProductosById(Buscar.Text);
                 try
                 {
-                    txtCodi.Text = producto.Codigo;
+                    txtCodi.Text = Convert.ToString(producto.Codigo);
                     txtNom.Text = producto.Producto;
                     txtMar.Text = producto.Marca;
                     txtCate.Text = producto.Categoria;
                     txtDescrip.Text = producto.Detalles;
-                    txtPC.Text = producto.Precio_Compra;
-                    txtPV.Text = producto.Precio_Venta_Menudeo;
-                    txtPM.Text = producto.Precio_Venta_Mayoreo;
-                    txtPE.Text = producto.Precio_Venta_Instructor;
-                    txtCantidad.Text = producto.Cantidad;
+                    txtPC.Text = Convert.ToString(producto.Precio_Compra);
+                    txtPV.Text = Convert.ToString(producto.Precio_Venta_Menudeo);
+                    txtPM.Text = Convert.ToString(producto.Precio_Venta_Mayoreo);
+                    txtPE.Text = Convert.ToString(producto.Precio_Venta_Instructor);
+                    txtCantidad.Text = Convert.ToString(producto.Cantidad);
                 }
                 catch (NullReferenceException)
                 {
@@ -114,19 +63,20 @@ namespace SoftEvolution
             else if (Tipo.Text.Equals("Actualizar"))
             {
                 s = 3;
-                btnsave.Text = "Actualizar";
+                guardarToolStripMenuItem.Text = "Actualizar";
                 txtCodi.Enabled = false;
+                txtCantidad.Enabled = false;
                 clsProductos producto = datos.getProductosById(Buscar.Text);
-                txtCodi.Text = producto.Codigo;
+                txtCodi.Text = Convert.ToString(producto.Codigo);
                 txtNom.Text = producto.Producto;
                 txtMar.Text = producto.Marca;
                 txtCate.Text = producto.Categoria;
                 txtDescrip.Text = producto.Detalles;
-                txtPC.Text = producto.Precio_Compra;
-                txtPV.Text = producto.Precio_Venta_Menudeo;
-                txtPM.Text = producto.Precio_Venta_Mayoreo;
-                txtPE.Text = producto.Precio_Venta_Instructor;
-                txtCantidad.Text = producto.Cantidad;
+                txtPC.Text = Convert.ToString(producto.Precio_Compra);
+                txtPV.Text = Convert.ToString(producto.Precio_Venta_Menudeo);
+                txtPM.Text = Convert.ToString(producto.Precio_Venta_Mayoreo);
+                txtPE.Text = Convert.ToString(producto.Precio_Venta_Instructor);
+                txtCantidad.Text = Convert.ToString(producto.Cantidad);
             }
         }
 
@@ -139,22 +89,27 @@ namespace SoftEvolution
 
         private void txtCodi_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
         }
 
         private void txtPC_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
+            if (e.KeyChar == ',')
+                e.KeyChar = '.';
+            //Permitir comas y puntos (si es punto )
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+                //si ya hay una coma no permite un nuevo ingreso de esta
+                if (txtPC.Text.Contains(",") || txtPC.Text.Contains("."))
+                    e.Handled = true;
+                else
+                    e.Handled = false;
         }
 
         private void txtPV_TextChanged(object sender, EventArgs e)
@@ -164,32 +119,53 @@ namespace SoftEvolution
 
         private void txtPV_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
+            if (e.KeyChar == ',')
+                e.KeyChar = '.';
+            //Permitir comas y puntos (si es punto )
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+                //si ya hay una coma no permite un nuevo ingreso de esta
+                if (txtPV.Text.Contains(",") || txtPV.Text.Contains("."))
+                    e.Handled = true;
+                else
+                    e.Handled = false;
         }
 
         private void txtPM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
+            if (e.KeyChar == ',')
+                e.KeyChar = '.';
+            //Permitir comas y puntos (si es punto )
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+                //si ya hay una coma no permite un nuevo ingreso de esta
+                if (txtPM.Text.Contains(",") || txtPM.Text.Contains("."))
+                    e.Handled = true;
+                else
+                    e.Handled = false;
         }
 
         private void txtPE_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((Char.IsNumber(e.KeyChar) == false) && (e.KeyChar != (char)Keys.Back))
+            if (((e.KeyChar) < 48) && ((e.KeyChar) != 8) || ((e.KeyChar) > 57))
             {
                 e.Handled = true;
             }
-            else
-                e.Handled = false;
+            if (e.KeyChar == ',')
+                e.KeyChar = '.';
+            //Permitir comas y puntos (si es punto )
+            if (e.KeyChar == ',' || e.KeyChar == '.')
+                //si ya hay una coma no permite un nuevo ingreso de esta
+                if (txtPE.Text.Contains(",") || txtPE.Text.Contains("."))
+                    e.Handled = true;
+                else
+                    e.Handled = false;
         }
 
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
@@ -240,6 +216,65 @@ namespace SoftEvolution
             }
             else
                 e.Handled = false;
+        }
+
+        private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (s == 1)
+            {
+                clsProductos producto = new clsProductos();
+                producto.Codigo = Convert.ToInt32(txtCodi.Text);
+                producto.Producto = txtNom.Text;
+                producto.Marca = txtMar.Text;
+                producto.Categoria = txtDescrip.Text;
+                producto.Detalles = txtDescrip.Text;
+                producto.Precio_Compra = Convert.ToDouble(txtPC.Text);
+                producto.Precio_Venta_Menudeo = Convert.ToDouble(txtPV.Text);
+                producto.Precio_Venta_Mayoreo = Convert.ToDouble(txtPM.Text);
+                producto.Precio_Venta_Instructor = Convert.ToDouble(txtPE.Text);
+                producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                if (!txtCodi.Text.Equals("") && !txtCantidad.Text.Equals(""))
+                {
+                    datos.AgregarProducto(producto);
+                    new frmProductos().Show();
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Llene los campos obligatorios");
+                }
+            }
+            else if (s == 3)
+            {
+                clsProductos producto = new clsProductos();
+                producto.Codigo = Convert.ToInt32(txtCodi.Text);
+                producto.Producto = txtNom.Text;
+                producto.Marca = txtMar.Text;
+                producto.Categoria = txtDescrip.Text;
+                producto.Detalles = txtDescrip.Text;
+                producto.Precio_Compra = Convert.ToDouble(txtPC.Text);
+                producto.Precio_Venta_Menudeo = Convert.ToDouble(txtPV.Text);
+                producto.Precio_Venta_Mayoreo = Convert.ToDouble(txtPM.Text);
+                producto.Precio_Venta_Instructor = Convert.ToDouble(txtPE.Text);
+                producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                if (!txtCodi.Text.Equals("") && !txtCantidad.Text.Equals(""))
+                {
+                    datos.ModificarProducto(producto);
+                    new frmProductos().Show();
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Llene los campos obligatorios");
+                }
+            }
+        }
+
+        private void cancerlarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmProductos prod = new frmProductos();
+            prod.Show();
         }
     }
 }

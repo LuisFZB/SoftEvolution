@@ -73,12 +73,6 @@
     <Compile Include="PRESENTACION\FrmAgregarProducto.Designer.cs">
       <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRESENTACION\FrmBuscarProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRESENTACION\FrmBuscarProducto.Designer.cs">
-      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
-    </Compile>
     <Compile Include="PRESENTACION\frmModificar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,9 +116,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\FrmAgregarProducto.resx">
       <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRESENTACION\FrmBuscarProducto.resx">
-      <DependentUpon>FrmBuscarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\frmModificar.resx">
       <DependentUpon>frmModificar.cs</DependentUpon>
