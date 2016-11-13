@@ -48,23 +48,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsConexion.cs" />
-    <Compile Include="clsDatosProducto.cs" />
-    <Compile Include="clsProductos.cs" />
-    <Compile Include="clsProveedores.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="DATOS\clsConexion.cs" />
+    <Compile Include="DATOS\clsDatosProducto.cs" />
+    <Compile Include="POJOS\clsProductos.cs" />
+    <Compile Include="DATOS\ConexionProveedor.cs" />
+    <Compile Include="POJOS\clsProveedores.cs" />
     <Compile Include="PRESENTACION\Corte de caja.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PRESENTACION\Corte de caja.Designer.cs">
       <DependentUpon>Corte de caja.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAOCorte.cs" />
-    <Compile Include="PojosCorte.cs" />
-    <Compile Include="Principal.cs">
+    <Compile Include="DATOS\DAOCorte.cs" />
+    <Compile Include="POJOS\PojosCorte.cs" />
+    <Compile Include="PRESENTACION\frmAgregarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal.Designer.cs">
+    <Compile Include="PRESENTACION\frmAgregarProveedor.designer.cs">
+      <DependentUpon>frmAgregarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\frmModificarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\frmModificarProveedor.designer.cs">
+      <DependentUpon>frmModificarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="PRESENTACION\FrmAgregarProducto.cs">
@@ -72,18 +84,6 @@
     </Compile>
     <Compile Include="PRESENTACION\FrmAgregarProducto.Designer.cs">
       <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRESENTACION\frmModificar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRESENTACION\frmModificar.Designer.cs">
-      <DependentUpon>frmModificar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRESENTACION\frmAgregar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRESENTACION\frmAgregar.Designer.cs">
-      <DependentUpon>frmAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="PRESENTACION\FrmModificarProducto.cs">
       <SubType>Form</SubType>
@@ -108,20 +108,20 @@
     <EmbeddedResource Include="PRESENTACION\Corte de caja.resx">
       <DependentUpon>Corte de caja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\frmAgregarProveedor.resx">
+      <DependentUpon>frmAgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\frmModificarProveedor.resx">
+      <DependentUpon>frmModificarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
+    <EmbeddedResource Include="PRESENTACION\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\FrmAgregarProducto.resx">
       <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRESENTACION\frmModificar.resx">
-      <DependentUpon>frmModificar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRESENTACION\frmAgregar.resx">
-      <DependentUpon>frmAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\FrmModificarProducto.resx">
       <DependentUpon>FrmModificarProducto.cs</DependentUpon>
@@ -152,10 +152,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DATOS\" />
-    <Folder Include="POJOS\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

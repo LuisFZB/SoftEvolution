@@ -38,6 +38,7 @@
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.tlsMostrar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,8 @@
             this.tlsAgregar,
             this.tlsModificar,
             this.tlsEliminar,
-            this.tlsSalir});
+            this.tlsSalir,
+            this.tlsMostrar});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.opcionesToolStripMenuItem.Text = "Opciones";
@@ -126,6 +128,13 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 4;
             // 
+            // tlsMostrar
+            // 
+            this.tlsMostrar.Name = "tlsMostrar";
+            this.tlsMostrar.Size = new System.Drawing.Size(152, 22);
+            this.tlsMostrar.Text = "Mostrar todos";
+            this.tlsMostrar.Click += new System.EventHandler(this.tlsMostrar_Click);
+            // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,5 +169,6 @@
         private System.Windows.Forms.DataGridView dgvProveedores;
         private System.Windows.Forms.ToolStripMenuItem tlsSalir;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem tlsMostrar;
     }
 }
