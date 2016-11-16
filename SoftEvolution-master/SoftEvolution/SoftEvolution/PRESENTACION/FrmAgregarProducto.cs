@@ -189,16 +189,16 @@ namespace SoftEvolution
                     clsDatosProducto objDatos = new clsDatosProducto();
 
                     // LEE LOS DATOS DE LAS CAJAS Y LOS GUARDA EN EL OBJETO
-                    objProducto.Codigo = Convert.ToInt32(txtCodi.Text);
+                    objProducto.Codigo = txtCodi.Text;
                     objProducto.Producto = txtNom.Text;
                     objProducto.Marca = txtMar.Text;
                     objProducto.Categoria = txtCate.Text;
                     objProducto.Detalles = txtDescrip.Text;
-                    objProducto.Precio_Compra = Convert.ToDouble(txtPC.Text);
-                    objProducto.Precio_Venta_Menudeo = Convert.ToDouble(txtPV.Text);
-                    objProducto.Precio_Venta_Mayoreo = Convert.ToDouble(txtPM.Text);
-                    objProducto.Precio_Venta_Instructor = Convert.ToDouble(txtPE.Text);
-                    objProducto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                    objProducto.Precio_Compra = txtPC.Text;
+                    objProducto.Precio_Venta_Menudeo = txtPV.Text;
+                    objProducto.Precio_Venta_Mayoreo = txtPM.Text;
+                    objProducto.Precio_Venta_Instructor = txtPE.Text;
+                    objProducto.Cantidad = txtCantidad.Text;
                     // INSERTA AL PRODUCTO MEDIANTE EL MÉTODO
                     objDatos.AgregarProducto(objProducto);
                     // MUESTRA MENSAJE DE CONFIRMACION

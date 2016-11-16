@@ -223,16 +223,16 @@ namespace SoftEvolution
             if (s == 1)
             {
                 clsProductos producto = new clsProductos();
-                producto.Codigo = Convert.ToInt32(txtCodi.Text);
+                producto.Codigo = txtCodi.Text;
                 producto.Producto = txtNom.Text;
                 producto.Marca = txtMar.Text;
                 producto.Categoria = txtDescrip.Text;
                 producto.Detalles = txtDescrip.Text;
-                producto.Precio_Compra = Convert.ToDouble(txtPC.Text);
-                producto.Precio_Venta_Menudeo = Convert.ToDouble(txtPV.Text);
-                producto.Precio_Venta_Mayoreo = Convert.ToDouble(txtPM.Text);
-                producto.Precio_Venta_Instructor = Convert.ToDouble(txtPE.Text);
-                producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                producto.Precio_Compra = txtPC.Text;
+                producto.Precio_Venta_Menudeo = txtPV.Text;
+                producto.Precio_Venta_Mayoreo = txtPM.Text;
+                producto.Precio_Venta_Instructor = txtPE.Text;
+                producto.Cantidad = txtCantidad.Text;
                 if (!txtCodi.Text.Equals("") && !txtCantidad.Text.Equals(""))
                 {
                     datos.AgregarProducto(producto);
@@ -247,16 +247,16 @@ namespace SoftEvolution
             else if (s == 3)
             {
                 clsProductos producto = new clsProductos();
-                producto.Codigo = Convert.ToInt32(txtCodi.Text);
+                producto.Codigo = txtCodi.Text;
                 producto.Producto = txtNom.Text;
                 producto.Marca = txtMar.Text;
                 producto.Categoria = txtDescrip.Text;
                 producto.Detalles = txtDescrip.Text;
-                producto.Precio_Compra = Convert.ToDouble(txtPC.Text);
-                producto.Precio_Venta_Menudeo = Convert.ToDouble(txtPV.Text);
-                producto.Precio_Venta_Mayoreo = Convert.ToDouble(txtPM.Text);
-                producto.Precio_Venta_Instructor = Convert.ToDouble(txtPE.Text);
-                producto.Cantidad = Convert.ToInt32(txtCantidad.Text);
+                producto.Precio_Compra = txtPC.Text;
+                producto.Precio_Venta_Menudeo = txtPV.Text;
+                producto.Precio_Venta_Mayoreo = txtPM.Text;
+                producto.Precio_Venta_Instructor = txtPE.Text;
+                producto.Cantidad = txtCantidad.Text;
                 if (!txtCodi.Text.Equals("") && !txtCantidad.Text.Equals(""))
                 {
                     datos.ModificarProducto(producto);

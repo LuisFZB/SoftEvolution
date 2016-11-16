@@ -10,19 +10,19 @@ namespace SoftEvolution
 {//declarion de los getters y setters
     class clsProductos
     {
-        private int pCodigo;
+        private string pCodigo;
         private string pProducto;
         private string pMarca;
         private string pCategoria;
         private string pDetalles;
-        private double pPrecio_Compra;
-        private double pPrecio_Venta_Menudeo;
-        private double pPrecio_Venta_Mayoreo;
-        private double pPrecio_Venta_Instructor;
-        private int pCantidad;
+        private string pPrecio_Compra;
+        private string pPrecio_Venta_Menudeo;
+        private string pPrecio_Venta_Mayoreo;
+        private string pPrecio_Venta_Instructor;
+        private string pCantidad;
 
 
-        public int Codigo
+        public string Codigo
         {
             get
             {
@@ -79,7 +79,7 @@ namespace SoftEvolution
                 pDetalles = value;
             }
         }
-        public double Precio_Compra
+        public string Precio_Compra
         {
             get
             {
@@ -91,7 +91,7 @@ namespace SoftEvolution
             }
         }
 
-        public double Precio_Venta_Menudeo
+        public string Precio_Venta_Menudeo
         {
             get
             {
@@ -103,7 +103,7 @@ namespace SoftEvolution
             }
         }
 
-        public double Precio_Venta_Mayoreo
+        public string Precio_Venta_Mayoreo
         {
             get
             {
@@ -116,7 +116,7 @@ namespace SoftEvolution
             }
         }
 
-        public double Precio_Venta_Instructor
+        public string Precio_Venta_Instructor
         {
             get
             {
@@ -128,7 +128,7 @@ namespace SoftEvolution
             }
         }
 
-        public int Cantidad
+        public string Cantidad
         {
             get
             {

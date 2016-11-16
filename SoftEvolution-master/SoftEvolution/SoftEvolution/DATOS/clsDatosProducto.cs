@@ -43,16 +43,16 @@ namespace SoftEvolution
             {
                 clsProductos objProducto = new clsProductos(); //objeto de los getters y setters
                                                                //obtenemos los datos de la base de datos y los pasamos a los getters de cada campo
-                objProducto.Codigo = dr.GetInt32("codigo");
+                objProducto.Codigo = dr.GetString("codigo");
                 objProducto.Producto = dr.GetString("producto");
                 objProducto.Marca = dr.GetString("marca");
                 objProducto.Categoria = dr.GetString("categoria");
                 objProducto.Detalles = dr.GetString("detalles");
-                objProducto.Precio_Compra = dr.GetInt32("precio_compra");
-                objProducto.Precio_Venta_Menudeo = dr.GetInt32("precio_venta_menudeo");
-                objProducto.Precio_Venta_Mayoreo = dr.GetInt32("precio_venta_mayoreo");
-                objProducto.Precio_Venta_Instructor = dr.GetInt32("precio_venta_instructor");
-                objProducto.Cantidad = dr.GetInt32("cantidad");
+                objProducto.Precio_Compra = dr.GetString("precio_compra");
+                objProducto.Precio_Venta_Menudeo = dr.GetString("precio_venta_menudeo");
+                objProducto.Precio_Venta_Mayoreo = dr.GetString("precio_venta_mayoreo");
+                objProducto.Precio_Venta_Instructor = dr.GetString("precio_venta_instructor");
+                objProducto.Cantidad = dr.GetString("cantidad");
 
                 lstProduc.Add(objProducto);//añade los datos a la lista
             }
@@ -78,16 +78,16 @@ namespace SoftEvolution
             if (dr.HasRows)
             {
                 dr.Read();
-                objProducto.Codigo = dr.GetInt32("codigo");
+                objProducto.Codigo = dr.GetString("codigo");
                 objProducto.Producto = dr.GetString("producto");
                 objProducto.Marca = dr.GetString("marca");
                 objProducto.Categoria = dr.GetString("categoria");
                 objProducto.Detalles = dr.GetString("detalles");
-                objProducto.Precio_Compra = dr.GetInt32("precio_compra");
-                objProducto.Precio_Venta_Menudeo = dr.GetInt32("precio_venta_menudeo");
-                objProducto.Precio_Venta_Mayoreo = dr.GetInt32("precio_venta_mayoreo");
-                objProducto.Precio_Venta_Instructor = dr.GetInt32("precio_venta_instructor");
-                objProducto.Cantidad = dr.GetInt32("cantidad");
+                objProducto.Precio_Compra = dr.GetString("precio_compra");
+                objProducto.Precio_Venta_Menudeo = dr.GetString("precio_venta_menudeo");
+                objProducto.Precio_Venta_Mayoreo = dr.GetString("precio_venta_mayoreo");
+                objProducto.Precio_Venta_Instructor = dr.GetString("precio_venta_instructor");
+                objProducto.Cantidad = dr.GetString("cantidad");
                 Cerrar();
                 return objProducto;
             }
@@ -202,16 +202,16 @@ namespace SoftEvolution
 
                 clsProductos pProducto = new clsProductos();    //objeto de la clase co getters y setters
                                                                 //se obtienen los datos de la base de datos y los agrega a la clase
-                pProducto.Codigo = _reader.GetInt32(0);
+                pProducto.Codigo = _reader.GetString(0);
                 pProducto.Producto = _reader.GetString(1);
                 pProducto.Marca = _reader.GetString(2);
                 pProducto.Categoria = _reader.GetString(3);
                 pProducto.Detalles = _reader.GetString(4);
-                pProducto.Precio_Compra = _reader.GetInt32(5);
-                pProducto.Precio_Venta_Menudeo = _reader.GetInt32(6);
-                pProducto.Precio_Venta_Mayoreo = _reader.GetInt32(7);
-                pProducto.Precio_Venta_Instructor = _reader.GetInt32(8);
-                pProducto.Cantidad = _reader.GetInt32(9);
+                pProducto.Precio_Compra = _reader.GetString(5);
+                pProducto.Precio_Venta_Menudeo = _reader.GetString(6);
+                pProducto.Precio_Venta_Mayoreo = _reader.GetString(7);
+                pProducto.Precio_Venta_Instructor = _reader.GetString(8);
+                pProducto.Cantidad = _reader.GetString(9);
 
                 lista.Add(pProducto); //los datos los agrega a la lista
                 Cerrar(); //cierra la conexion
@@ -235,16 +235,16 @@ namespace SoftEvolution
             if (midataReader.HasRows) //codicion para obtener los datos en caso de que haya uno a buscar
             {
                 //obtenemos los datos y los pasamos a la referencia de la clase que tiene los getters y setters
-                produ.Codigo = Convert.ToInt32(midataReader["codigo"]);
+                produ.Codigo = midataReader["codigo"].ToString();
                 produ.Producto = midataReader["producto"].ToString();
                 produ.Marca = midataReader["marca"].ToString();
                 produ.Categoria = midataReader["categoria"].ToString();
                 produ.Detalles = midataReader["detalles"].ToString();
-                produ.Precio_Compra = Convert.ToInt32(midataReader["precio_compra"].ToString());
-                produ.Precio_Venta_Menudeo = Convert.ToInt32(midataReader["precio_venta_menudeo"].ToString());
-                produ.Precio_Venta_Mayoreo = Convert.ToInt32(midataReader["precio_venta_mayoreo"].ToString());
-                produ.Precio_Venta_Instructor = Convert.ToInt32(midataReader["precio_venta_instructor"].ToString());
-                produ.Cantidad = Convert.ToInt32(midataReader["cantidad"].ToString());
+                produ.Precio_Compra = midataReader["precio_compra"].ToString();
+                produ.Precio_Venta_Menudeo = midataReader["precio_venta_menudeo"].ToString();
+                produ.Precio_Venta_Mayoreo = midataReader["precio_venta_mayoreo"].ToString();
+                produ.Precio_Venta_Instructor = midataReader["precio_venta_instructor"].ToString();
+                produ.Cantidad = midataReader["cantidad"].ToString();
 
             }
             else //si no hay ningun dato a buscar
