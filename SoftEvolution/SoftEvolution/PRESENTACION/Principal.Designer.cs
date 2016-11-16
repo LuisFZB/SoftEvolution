@@ -31,6 +31,7 @@
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.Corte = new System.Windows.Forms.Button();
+            this.brnInve = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProveedores
@@ -63,11 +64,22 @@
             this.Corte.UseVisualStyleBackColor = true;
             this.Corte.Click += new System.EventHandler(this.Corte_Click);
             // 
+            // brnInve
+            // 
+            this.brnInve.Location = new System.Drawing.Point(151, 221);
+            this.brnInve.Name = "brnInve";
+            this.brnInve.Size = new System.Drawing.Size(75, 23);
+            this.brnInve.TabIndex = 3;
+            this.brnInve.Text = "Inventario";
+            this.brnInve.UseVisualStyleBackColor = true;
+            this.brnInve.Click += new System.EventHandler(this.brnInve_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 301);
+            this.Controls.Add(this.brnInve);
             this.Controls.Add(this.Corte);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnProveedores);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button Corte;
+        private System.Windows.Forms.Button brnInve;
     }
 }
 

@@ -15,7 +15,7 @@ public class ConexionProveedor
     {
         //variable para almacenar los datos de conexión de la base de datos
         string cadena;
-        cadena = "SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=EvolutionGYM" + "" + ";UID=" + "root" + ";PWD=1234";
+        cadena = "SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=EvolutionGYM" + "" + ";UID=" + "root" + ";PWD=root";
         conexion.ConnectionString = cadena; //pasa los datos de la cadena para realizar la conexion
         conexion.Open(); //abre la conexión
 

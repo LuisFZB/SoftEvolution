@@ -17,7 +17,7 @@ namespace SoftEvolution
         public void Conectar() //Método de conexión
         {
             string strCadenaConexion; //variable para almacenar los datos de conexión de la base de datos
-            strCadenaConexion = "SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=" + "evolutiongym" + ";UID=" + "root" + ";PWD=" + "12345";
+            strCadenaConexion = "SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=" + "evolutiongym" + ";UID=" + "root" + ";PWD=" + "root";
             conexion.ConnectionString = strCadenaConexion; //pasa los datos de la cadena para realizar la conexion
             conexion.Open();  //abre la conexión
         }

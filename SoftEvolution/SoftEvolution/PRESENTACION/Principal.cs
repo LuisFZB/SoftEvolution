@@ -34,5 +34,11 @@ namespace SoftEvolution
             Corte_de_caja corte = new Corte_de_caja();
             corte.Show();
         }
+
+        private void brnInve_Click(object sender, EventArgs e)
+        {
+            FrmInventario inv = new FrmInventario();
+            inv.Show();
+        }
     }
 }

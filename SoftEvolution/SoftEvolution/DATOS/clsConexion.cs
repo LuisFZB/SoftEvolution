@@ -15,7 +15,7 @@ namespace SoftEvolution
         public void Conectar()
         {
             string strCadenaConexion;
-            strCadenaConexion = "SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=" + "evolutiongym" + ";UID=" + "root" + ";PWD=" + "1234";
+            strCadenaConexion = "SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=" + "evolutiongym" + ";UID=" + "root" + ";PWD=" + "root";
             cnConexion.ConnectionString = strCadenaConexion;
             cnConexion.Open();
         }
