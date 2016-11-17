@@ -51,6 +51,7 @@
     <Compile Include="DATOS\clsConexion.cs" />
     <Compile Include="DATOS\clsDatosInventario.cs" />
     <Compile Include="DATOS\clsDatosProducto.cs" />
+    <Compile Include="DATOS\UsuariosDAL.cs" />
     <Compile Include="POJOS\clsInventario.cs" />
     <Compile Include="POJOS\clsProductos.cs" />
     <Compile Include="DATOS\ConexionProveedor.cs" />
@@ -87,6 +88,18 @@
     <Compile Include="PRESENTACION\frmModificarProveedor.designer.cs">
       <DependentUpon>frmModificarProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRESENTACION\FrmOperacionesUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\FrmOperacionesUsuarios.designer.cs">
+      <DependentUpon>FrmOperacionesUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\FrmUsuarios.designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRESENTACION\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +130,7 @@
     <Compile Include="PRESENTACION\frmProveedores.Designer.cs">
       <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="POJOS\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PRESENTACION\Corte de caja.resx">
@@ -134,8 +148,14 @@
     <EmbeddedResource Include="PRESENTACION\frmModificarProveedor.resx">
       <DependentUpon>frmModificarProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\FrmOperacionesUsuarios.resx">
+      <DependentUpon>FrmOperacionesUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

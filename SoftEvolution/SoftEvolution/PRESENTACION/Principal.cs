@@ -40,5 +40,11 @@ namespace SoftEvolution
             FrmInventario inv = new FrmInventario();
             inv.Show();
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            Form1 usuarios = new Form1();
+            usuarios.Show();
+        }
     }
 }

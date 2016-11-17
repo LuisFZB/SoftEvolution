@@ -87,3 +87,7 @@ C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolu
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmProveedores.resources
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Properties.Resources.resources
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.csproj.GenerateResource.Cache
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmBuscarInven.resources
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmInventario.resources
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmOperacionesUsuarios.resources
+C:\Users\Luis\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Form1.resources

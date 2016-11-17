@@ -32,6 +32,7 @@
             this.btnProductos = new System.Windows.Forms.Button();
             this.Corte = new System.Windows.Forms.Button();
             this.brnInve = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProveedores
@@ -66,7 +67,7 @@
             // 
             // brnInve
             // 
-            this.brnInve.Location = new System.Drawing.Point(151, 221);
+            this.brnInve.Location = new System.Drawing.Point(151, 209);
             this.brnInve.Name = "brnInve";
             this.brnInve.Size = new System.Drawing.Size(75, 23);
             this.brnInve.TabIndex = 3;
@@ -74,11 +75,22 @@
             this.brnInve.UseVisualStyleBackColor = true;
             this.brnInve.Click += new System.EventHandler(this.brnInve_Click);
             // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Location = new System.Drawing.Point(151, 247);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(75, 23);
+            this.btnUsuarios.TabIndex = 4;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 301);
+            this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.brnInve);
             this.Controls.Add(this.Corte);
             this.Controls.Add(this.btnProductos);
@@ -95,6 +107,7 @@
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button Corte;
         private System.Windows.Forms.Button brnInve;
+        private System.Windows.Forms.Button btnUsuarios;
     }
 }
 
