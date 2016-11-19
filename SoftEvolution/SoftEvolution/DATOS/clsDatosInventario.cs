@@ -55,8 +55,8 @@ namespace SoftEvolution
             while (dr.Read())
             {
                 clsInventario objInv = new clsInventario();
-                objInv.codigo = dr.GetString("codigo");
-                objInv.Cantidad = dr.GetString("bodega");
+                objInv.codigo = dr.GetInt32("codigo");
+                objInv.Cantidad = dr.GetInt32("bodega");
 
                 lstInv.Add(objInv);
             }
@@ -85,8 +85,8 @@ namespace SoftEvolution
             if (dr.HasRows)
             {
                 dr.Read();
-                objInv.codigo = dr.GetString("codigo");
-                objInv.Cantidad = dr.GetString("bodega");
+                objInv.codigo = dr.GetInt32("codigo");
+                objInv.Cantidad = dr.GetInt32("bodega");
                 Cerrar();
                 return objInv;
             }
@@ -97,30 +97,76 @@ namespace SoftEvolution
             }
         }
         /// <summary>
-        /// Metodo de buscar, verificar el producto a buscar con una consulta en  productos.
+        /// método para buscar datos en la base de datos que retorna la lista con los datos
+        /// 
         /// 
         /// </summary>
         /// <param name="codig"></param>
         /// <returns>Retorna una lista de los productos a buscar</returns>
-        public static List<clsInventario> Buscar(string codig)
+        public List<clsInventario> buscar(string codigo) 
         {
-            List<clsInventario> _lista = new List<clsInventario>();
+            List<clsInventario> lista = new List<clsInventario>(); 
+            string sql; 
+            MySqlCommand cm = new MySqlCommand(); 
+            MySqlDataReader _reader; 
+            Conectar(); 
+            sql = "SELECT * FROM productos where codigo =" + codigo; 
+            cm.CommandText = sql; 
+            cm.CommandType = CommandType.Text; 
+            cm.Connection = cnConexion;
+            _reader = cm.ExecuteReader(); 
 
-            MySqlCommand _comando = new MySqlCommand(String.Format(
-           "SELECT codigo, bodega FROM productos where codigo ='{0}'", codig), clsInventario.ObtenerConexion());
-            MySqlDataReader _reader = _comando.ExecuteReader();
-            while (_reader.Read())
+            if (_reader.Read()) //si se esta leyendo la base de datos entrara al if
             {
-                clsInventario objInv = new clsInventario();
-                objInv.codigo = _reader.GetString(0);
-                objInv.Cantidad = _reader.GetString(1);
 
-                _lista.Add(objInv);
+                clsInventario Oinv = new clsInventario();   
+                Oinv.codigo = _reader.GetInt32(0);
+                Oinv.Cantidad = _reader.GetInt32(1);
+
+                lista.Add(Oinv); 
+                Cerrar(); 
+                return lista; 
             }
-
-            return _lista;
+            else 
+            {
+                Cerrar();  
+                return null; 
+            }
         }
+
+        /// <summary>
+        /// Metodod para buscar dato en la base de datos, mediante los datos con la refereancia 
+        /// de la calse de Pojos.
+        /// Colocamos una condicion para obtener los datos en caso de que haya uno a buscar
+        /// lo obtenemos por los getter y setter de la clase de pojos
+        /// de lo contrario no retornamos nada ya no hay dato a buscar
+        /// </summary>
+        /// <param name="inv"></param>
+        /// <returns></returns>
+        public clsInventario buscarProducto(ref clsInventario inv) 
+        {
+            Conectar(); 
+            string consulta = "SELECT * FROM productos WHERE codigo =" + inv.codigo;
+            MySqlCommand miCom = new MySqlCommand(consulta, cnConexion); 
+            MySqlDataReader midataReader = miCom.ExecuteReader(); 
+            midataReader.Read(); 
+            if (midataReader.HasRows)
+            {
+                
+                inv.codigo = Convert.ToInt32(midataReader["codigo"]);
+                inv.Cantidad = Convert.ToInt32(midataReader["bodega"].ToString());
+
+            }
+            else 
+            {
+                return null; 
+            }
+            midataReader.Close(); 
+            miCom.Dispose(); 
+            cnConexion.Close(); 
+            return inv; 
+        }
+
     }
 
 }
-

@@ -37,7 +37,7 @@ namespace SoftEvolution
 
         private void brnInve_Click(object sender, EventArgs e)
         {
-            FrmInventario inv = new FrmInventario();
+            frmInventario inv = new frmInventario();
             inv.Show();
         }
 
@@ -45,6 +45,12 @@ namespace SoftEvolution
         {
             Form1 usuarios = new Form1();
             usuarios.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmOrdenes ord = new frmOrdenes();
+            ord.Show();
         }
     }
 }

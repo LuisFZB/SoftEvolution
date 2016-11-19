@@ -77,7 +77,6 @@ C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolu
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.csprojResolveAssemblyReference.cache
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Corte_de_caja.resources
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmAgregarProveedor.resources
-C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmBuscarInven.resources
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmInventario.resources
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmModificarProveedor.resources
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmProductos.resources
@@ -115,3 +114,6 @@ C:\Users\ike\Desktop\SoftEvolution-master\SoftEvolution\SoftEvolution\obj\Debug\
 C:\Users\Luis\Desktop\SoftEvolution\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.exe.config
 C:\Users\Luis\Desktop\SoftEvolution\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.exe
 C:\Users\Luis\Desktop\SoftEvolution\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.pdb
+C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmOperacionesUsuarios.resources
+C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Form1.resources
+C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmOrdenes.resources

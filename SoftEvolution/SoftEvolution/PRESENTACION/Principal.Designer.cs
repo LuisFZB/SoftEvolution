@@ -33,6 +33,7 @@
             this.Corte = new System.Windows.Forms.Button();
             this.brnInve = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProveedores
@@ -85,11 +86,22 @@
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(151, 32);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Ordenes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 301);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.brnInve);
             this.Controls.Add(this.Corte);
@@ -108,6 +120,7 @@
         private System.Windows.Forms.Button Corte;
         private System.Windows.Forms.Button brnInve;
         private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Button button1;
     }
 }
 

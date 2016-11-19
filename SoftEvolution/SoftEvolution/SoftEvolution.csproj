@@ -50,9 +50,11 @@
   <ItemGroup>
     <Compile Include="DATOS\clsConexion.cs" />
     <Compile Include="DATOS\clsDatosInventario.cs" />
+    <Compile Include="DATOS\clsDatosOrdenes.cs" />
     <Compile Include="DATOS\clsDatosProducto.cs" />
     <Compile Include="DATOS\UsuariosDAL.cs" />
     <Compile Include="POJOS\clsInventario.cs" />
+    <Compile Include="POJOS\clsOrdenes.cs" />
     <Compile Include="POJOS\clsProductos.cs" />
     <Compile Include="DATOS\ConexionProveedor.cs" />
     <Compile Include="POJOS\clsProveedores.cs" />
@@ -70,17 +72,11 @@
     <Compile Include="PRESENTACION\frmAgregarProveedor.designer.cs">
       <DependentUpon>frmAgregarProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRESENTACION\frmBuscarInven.cs">
+    <Compile Include="PRESENTACION\frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PRESENTACION\frmBuscarInven.designer.cs">
-      <DependentUpon>frmBuscarInven.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRESENTACION\FrmInventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PRESENTACION\FrmInventario.designer.cs">
-      <DependentUpon>FrmInventario.cs</DependentUpon>
+    <Compile Include="PRESENTACION\frmInventario.designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="PRESENTACION\frmModificarProveedor.cs">
       <SubType>Form</SubType>
@@ -93,6 +89,12 @@
     </Compile>
     <Compile Include="PRESENTACION\FrmOperacionesUsuarios.designer.cs">
       <DependentUpon>FrmOperacionesUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\frmOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\frmOrdenes.designer.cs">
+      <DependentUpon>frmOrdenes.cs</DependentUpon>
     </Compile>
     <Compile Include="PRESENTACION\FrmUsuarios.cs">
       <SubType>Form</SubType>
@@ -139,17 +141,17 @@
     <EmbeddedResource Include="PRESENTACION\frmAgregarProveedor.resx">
       <DependentUpon>frmAgregarProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRESENTACION\frmBuscarInven.resx">
-      <DependentUpon>frmBuscarInven.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRESENTACION\FrmInventario.resx">
-      <DependentUpon>FrmInventario.cs</DependentUpon>
+    <EmbeddedResource Include="PRESENTACION\frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\frmModificarProveedor.resx">
       <DependentUpon>frmModificarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\FrmOperacionesUsuarios.resx">
       <DependentUpon>FrmOperacionesUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\frmOrdenes.resx">
+      <DependentUpon>frmOrdenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>

@@ -15,8 +15,8 @@ namespace SoftEvolution
     /// </summary>
     class clsInventario
     {
-        private string Icodigo;
-        private string Icantidad;
+        private int Icodigo;
+        private int Icantidad;
         /// <summary>
         /// Declaraciones de los atributos Codigo,Cantidad 
         /// Conexion a la Base de datos 
@@ -35,7 +35,7 @@ namespace SoftEvolution
             return conectar;
         }
 
-        public string codigo
+        public int codigo
         {
             get
             {
@@ -48,7 +48,7 @@ namespace SoftEvolution
         }
 
 
-        public string Cantidad
+        public int Cantidad
         {
             get
             {
