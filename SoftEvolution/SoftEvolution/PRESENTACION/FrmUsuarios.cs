@@ -16,6 +16,8 @@ namespace SoftEvolution
         public Form1()
         {
             InitializeComponent();
+            //No deja minimizar una ventana
+            MinimizeBox = false;
         }
 
        public int yaseleccionoparaeliminar = 0;
@@ -223,6 +225,13 @@ namespace SoftEvolution
             txtNombre.Text = "";
             txtApellidos.Text = "";
             comboTipo.Text = "Seleccionar:";
+        }
+
+        private void regresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Principal a = new Principal();
+            a.Show();
+            Hide();
         }
     }
 }

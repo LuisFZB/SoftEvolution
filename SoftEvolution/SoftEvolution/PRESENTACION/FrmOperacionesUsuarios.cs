@@ -24,6 +24,8 @@ namespace SoftEvolution
         public FrmOperacionesUsuarios()
         {
             InitializeComponent();
+            //No deja minimizar una ventana
+            MinimizeBox = false;
             //Creo un objeto de mi clase en la que estan os diferentes metodos de Cargar,Buscar,Modificar,Eliminar
             UsuariosDAL datos = new UsuariosDAL();
             //Cargo todos los datos en mi tabla una ves que se abre está ventana.

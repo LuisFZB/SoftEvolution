@@ -128,6 +128,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmOperacionesUsuarios";
             this.Text = "Buscar";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Buscar_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

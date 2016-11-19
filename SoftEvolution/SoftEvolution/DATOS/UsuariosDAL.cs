@@ -37,7 +37,7 @@ namespace SoftEvolution
             cm.Parameters.AddWithValue("@contraseña", obj.contraseña);
             cm.Parameters.AddWithValue("@nombres", obj.nombres);
             cm.Parameters.AddWithValue("@apellidos", obj.apellidos);
-            sql = "INSERT INTO usuarios (tipo,usuario,contraseña,nombres,apellidos) VALUES (@tipo,@usuario,@contraseña,@nombres,@apellidos)";
+            sql = "INSERT INTO usuarios (tipo,usuario,contraseña,nombres,apellidos) VALUES (@tipo,@usuario,SHA1(@contraseña),@nombres,@apellidos)";
             cm.CommandText = sql;
             cm.CommandType = CommandType.Text;
             cm.Connection = cnConexion;
