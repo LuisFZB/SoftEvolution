@@ -188,14 +188,14 @@
             // tlsActualizar
             // 
             this.tlsActualizar.Name = "tlsActualizar";
-            this.tlsActualizar.Size = new System.Drawing.Size(152, 22);
+            this.tlsActualizar.Size = new System.Drawing.Size(126, 22);
             this.tlsActualizar.Text = "Actualizar";
             this.tlsActualizar.Click += new System.EventHandler(this.tlsActualizar_Click);
             // 
             // tlsCancelar
             // 
             this.tlsCancelar.Name = "tlsCancelar";
-            this.tlsCancelar.Size = new System.Drawing.Size(152, 22);
+            this.tlsCancelar.Size = new System.Drawing.Size(126, 22);
             this.tlsCancelar.Text = "Cancelar";
             this.tlsCancelar.Click += new System.EventHandler(this.tlsCancelar_Click);
             // 
@@ -220,8 +220,11 @@
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmModificarProveedor";
             this.Text = "frmModificar";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

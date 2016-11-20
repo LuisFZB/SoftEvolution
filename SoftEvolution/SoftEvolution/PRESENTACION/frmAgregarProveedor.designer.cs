@@ -208,14 +208,14 @@
             // tlsAgregar
             // 
             this.tlsAgregar.Name = "tlsAgregar";
-            this.tlsAgregar.Size = new System.Drawing.Size(152, 22);
+            this.tlsAgregar.Size = new System.Drawing.Size(120, 22);
             this.tlsAgregar.Text = "Agregar";
             this.tlsAgregar.Click += new System.EventHandler(this.tlsAgregar_Click);
             // 
             // tlsCancelar
             // 
             this.tlsCancelar.Name = "tlsCancelar";
-            this.tlsCancelar.Size = new System.Drawing.Size(152, 22);
+            this.tlsCancelar.Size = new System.Drawing.Size(120, 22);
             this.tlsCancelar.Text = "Cancelar";
             this.tlsCancelar.Click += new System.EventHandler(this.tlsCancelar_Click);
             // 
@@ -241,8 +241,11 @@
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAgregarProveedor";
             this.Text = "frmAgregar";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAgregar_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

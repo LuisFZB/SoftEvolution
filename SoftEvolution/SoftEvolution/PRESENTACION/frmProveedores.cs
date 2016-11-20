@@ -58,6 +58,10 @@ namespace SoftEvolution
         {
             ConexionProveedor con = new ConexionProveedor();//objeto de la clase conexion
             dgvProveedores.DataSource = con.getProveedor();//muestra los datos de la base de datos en el datagridview
+            //Código para adaptar el datagridview al tamaño de la ventana
+            dgvProveedores.Left = this.Left + 25;
+            dgvProveedores.Height = this.Height - dgvProveedores.Top - 100;
+            dgvProveedores.Width = this.Width - 50;
         }
 
         

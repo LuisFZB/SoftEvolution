@@ -34,11 +34,11 @@
             this.tlsModificar = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsMostrar = new System.Windows.Forms.ToolStripMenuItem();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.tlsMostrar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.SuspendLayout();
@@ -68,30 +68,37 @@
             // tlsAgregar
             // 
             this.tlsAgregar.Name = "tlsAgregar";
-            this.tlsAgregar.Size = new System.Drawing.Size(152, 22);
+            this.tlsAgregar.Size = new System.Drawing.Size(148, 22);
             this.tlsAgregar.Text = "Agregar";
             this.tlsAgregar.Click += new System.EventHandler(this.tlsAgregar_Click);
             // 
             // tlsModificar
             // 
             this.tlsModificar.Name = "tlsModificar";
-            this.tlsModificar.Size = new System.Drawing.Size(152, 22);
+            this.tlsModificar.Size = new System.Drawing.Size(148, 22);
             this.tlsModificar.Text = "Modificar";
             this.tlsModificar.Click += new System.EventHandler(this.tlsModificar_Click);
             // 
             // tlsEliminar
             // 
             this.tlsEliminar.Name = "tlsEliminar";
-            this.tlsEliminar.Size = new System.Drawing.Size(152, 22);
+            this.tlsEliminar.Size = new System.Drawing.Size(148, 22);
             this.tlsEliminar.Text = "Eliminar";
             this.tlsEliminar.Click += new System.EventHandler(this.tlsEliminar_Click);
             // 
             // tlsSalir
             // 
             this.tlsSalir.Name = "tlsSalir";
-            this.tlsSalir.Size = new System.Drawing.Size(152, 22);
+            this.tlsSalir.Size = new System.Drawing.Size(148, 22);
             this.tlsSalir.Text = "Salir";
             this.tlsSalir.Click += new System.EventHandler(this.tlsSalir_Click);
+            // 
+            // tlsMostrar
+            // 
+            this.tlsMostrar.Name = "tlsMostrar";
+            this.tlsMostrar.Size = new System.Drawing.Size(148, 22);
+            this.tlsMostrar.Text = "Mostrar todos";
+            this.tlsMostrar.Click += new System.EventHandler(this.tlsMostrar_Click);
             // 
             // txtBuscar
             // 
@@ -128,13 +135,6 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 4;
             // 
-            // tlsMostrar
-            // 
-            this.tlsMostrar.Name = "tlsMostrar";
-            this.tlsMostrar.Size = new System.Drawing.Size(152, 22);
-            this.tlsMostrar.Text = "Mostrar todos";
-            this.tlsMostrar.Click += new System.EventHandler(this.tlsMostrar_Click);
-            // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -146,8 +146,11 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmProveedores";
             this.Text = "frmProveedores";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmProveedores_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
