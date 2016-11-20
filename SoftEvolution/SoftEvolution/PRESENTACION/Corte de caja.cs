@@ -17,23 +17,36 @@ namespace SoftEvolution
             InitializeComponent();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
+     
         private void Corte_de_caja_Load(object sender, EventArgs e)
         {
+           
+        }
+
+        private void Corte_de_caja_Load_1(object sender, EventArgs e)
+        {
+            //objeto de la clase de datos
             DAOCorte datos = new DAOCorte();
+            //objeto de la clase pojos
             PojosCorte pojos = new PojosCorte();
-            List<PojosCorte> li = datos.ListCorte();
+            //creacion de lista con los datos cargados de la consulta
+            List<PojosCorte> li= datos.ListCorte();
+            //condicion en caso de no encontrar valores en la consulta
+            if(li.Count==0){
+                MessageBox.Show("No hay ventas registradas");
+            }
+            else {
 
-
-            int con = 0;
-            double suma = 0;
-            int cant = 0;
+            int con =0; //variable para almacenar la cantidad de ventas realizadas
+            double suma = 0; //variable para almacenar la cantidad de productos vendidos
+            int cant = 0;//variable para almacenar la suma total de las ventas
             try
             {
+                //ciclo para recorer la lista y llenar el listview
                 foreach (PojosCorte po in li)
                 {
 
@@ -53,14 +66,31 @@ namespace SoftEvolution
                     con++;
                 }
 
-                label5.Text = con.ToString();
-                label6.Text = cant.ToString();
-                label7.Text = suma.ToString();
+                label5.Text = con.ToString();//la cantidad de ventas realizadas
+                label6.Text = cant.ToString();//la cantidad de productos vendidos
+                label7.Text = suma.ToString();// la suma total de las ventas
             }
             catch (Exception)
             {
                 MessageBox.Show("Error consulte al administrador");
             }
+            }
+           
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

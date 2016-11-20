@@ -109,6 +109,7 @@
             this.Controls.Add(this.btnProveedores);
             this.Name = "Principal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.ResumeLayout(false);
 
         }

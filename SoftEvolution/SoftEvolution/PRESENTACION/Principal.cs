@@ -52,5 +52,10 @@ namespace SoftEvolution
             frmOrdenes ord = new frmOrdenes();
             ord.Show();
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

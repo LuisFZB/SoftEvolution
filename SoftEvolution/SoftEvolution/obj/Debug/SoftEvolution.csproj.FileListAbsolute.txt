@@ -25,9 +25,6 @@ C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\D
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Corte_de_caja.resources
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Principal.resources
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmAgregarProducto.resources
-C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmBuscarProducto.resources
-C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmModificar.resources
-C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmAgregar.resources
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmModificarProducto.resources
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmProveedores.resources
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Properties.Resources.resources
@@ -139,3 +136,9 @@ C:\Users\Luis\Desktop\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEv
 C:\Users\Luis\Desktop\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmProveedores.resources
 C:\Users\Luis\Desktop\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Properties.Resources.resources
 C:\Users\Luis\Desktop\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.csproj.GenerateResource.Cache
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmAgregarProveedor.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmInventario.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmModificarProveedor.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.FrmOperacionesUsuarios.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmOrdenes.resources
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Form1.resources

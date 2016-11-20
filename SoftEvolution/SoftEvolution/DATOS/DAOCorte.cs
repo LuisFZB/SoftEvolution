@@ -10,8 +10,10 @@ namespace SoftEvolution
 {
     class DAOCorte
     {
-        private MySqlConnection conexion = new MySqlConnection();
+        //uso de la libreria de MySQL para la conexion
 
+        private MySqlConnection conexion = new MySqlConnection();
+        //metodo para hacer la conexion a la base datos
         public void conectar()
         {
             string cadena;
@@ -20,25 +22,30 @@ namespace SoftEvolution
             conexion.Open();
 
         }
+        //metodo para cerrar la conexion
         public void cerrar()
         {
             conexion.Close();
         }
+        //metodo para hacer la consulta de busqueda
 
         public List<PojosCorte> ListCorte()
         {
-
+            //lista para almacenar los valores de la consulta
             List<PojosCorte> lista = new List<PojosCorte>();
             String sql;
             MySqlCommand cm = new MySqlCommand();
             MySqlDataReader dr;
             conectar();
+            // toma la fecha del sietma para ña consulta
             cm.Parameters.AddWithValue("@fecha", DateTime.Now.ToString("yyyy-MM-dd"));
+            //consulta sql
             sql = "SELECT folio,usuario,codigo_producto,cantidad,precio,total FROM ventas where fecha = @fecha";
             cm.CommandText = sql;
             cm.CommandType = CommandType.Text;
             cm.Connection = conexion;
             dr = cm.ExecuteReader();
+
             while (dr.Read())
             {
                 PojosCorte objCorte = new PojosCorte();
@@ -55,5 +62,7 @@ namespace SoftEvolution
 
             return lista;
         }
+
+
     }
 }
