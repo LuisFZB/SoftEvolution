@@ -37,9 +37,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtDescrip = new System.Windows.Forms.TextBox();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtPE = new System.Windows.Forms.TextBox();
             this.txtPM = new System.Windows.Forms.TextBox();
             this.txtPV = new System.Windows.Forms.TextBox();
@@ -94,7 +92,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 333);
+            this.label5.Location = new System.Drawing.Point(42, 309);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 4;
@@ -137,31 +135,14 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Precio Entrenador";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(42, 298);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Cantidad";
-            // 
             // txtDescrip
             // 
-            this.txtDescrip.Location = new System.Drawing.Point(137, 334);
+            this.txtDescrip.Location = new System.Drawing.Point(137, 306);
             this.txtDescrip.Multiline = true;
             this.txtDescrip.Name = "txtDescrip";
             this.txtDescrip.Size = new System.Drawing.Size(132, 54);
             this.txtDescrip.TabIndex = 65;
             this.txtDescrip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescrip_KeyPress);
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(137, 298);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(54, 20);
-            this.txtCantidad.TabIndex = 64;
-            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtPE
             // 
@@ -249,14 +230,14 @@
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.agregarToolStripMenuItem.Text = "Agregar";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // cancelarToolStripMenuItem
             // 
             this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
-            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.cancelarToolStripMenuItem.Text = "Cancelar";
             this.cancelarToolStripMenuItem.Click += new System.EventHandler(this.cancelarToolStripMenuItem_Click);
             // 
@@ -264,10 +245,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 403);
+            this.ClientSize = new System.Drawing.Size(419, 472);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtDescrip);
-            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtPE);
             this.Controls.Add(this.txtPM);
             this.Controls.Add(this.txtPV);
@@ -276,7 +256,6 @@
             this.Controls.Add(this.txtMar);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.txtCodi);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -286,10 +265,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(435, 441);
-            this.MinimumSize = new System.Drawing.Size(435, 441);
             this.Name = "FrmAgregarProducto";
             this.Text = "FrmAgregarProducto";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmAgregarProducto_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -309,9 +287,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDescrip;
-        private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtPE;
         private System.Windows.Forms.TextBox txtPM;
         private System.Windows.Forms.TextBox txtPV;

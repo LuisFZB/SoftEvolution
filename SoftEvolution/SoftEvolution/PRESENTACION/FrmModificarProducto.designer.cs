@@ -156,6 +156,7 @@
             this.Tipo.Size = new System.Drawing.Size(41, 13);
             this.Tipo.TabIndex = 44;
             this.Tipo.Text = "label11";
+            this.Tipo.Visible = false;
             // 
             // Buscar
             // 
@@ -166,6 +167,7 @@
             this.Buscar.Size = new System.Drawing.Size(41, 13);
             this.Buscar.TabIndex = 45;
             this.Buscar.Text = "label12";
+            this.Buscar.Visible = false;
             // 
             // txtCodi
             // 
@@ -254,7 +256,7 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(431, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(433, 25);
             this.toolStrip1.TabIndex = 56;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -270,14 +272,14 @@
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // cancerlarToolStripMenuItem
             // 
             this.cancerlarToolStripMenuItem.Name = "cancerlarToolStripMenuItem";
-            this.cancerlarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cancerlarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cancerlarToolStripMenuItem.Text = "Cancerlar";
             this.cancerlarToolStripMenuItem.Click += new System.EventHandler(this.cancerlarToolStripMenuItem_Click);
             // 
@@ -285,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 441);
+            this.ClientSize = new System.Drawing.Size(433, 506);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtDescrip);
             this.Controls.Add(this.txtCantidad);
@@ -309,10 +311,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(447, 480);
-            this.MinimumSize = new System.Drawing.Size(447, 480);
             this.Name = "FrmModificarProducto";
             this.Text = "FrmModificarProducto";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmModificarProducto_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

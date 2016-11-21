@@ -76,7 +76,7 @@ namespace SoftEvolution
                 clsProductos produc = new clsProductos();//objeto de la clase clsProductos
                 clsDatosProducto datos = new clsDatosProducto();//objeto de la clase clsDatosProducto
                 //le indicamos que el dato que seleccione, solo tome el id y haga la conversion a entero
-                produc.Codigo = Convert.ToInt32(dgvProductos.Rows[dgvProductos.SelectedRows[0].Index].Cells[0].Value.ToString());
+                produc.Codigo = Convert.ToString(dgvProductos.Rows[dgvProductos.SelectedRows[0].Index].Cells[0].Value.ToString());
                 //mensaje de confirmacion
                 DialogResult dialog = MessageBox.Show("¿Deseas eliminar este producto?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
@@ -101,6 +101,10 @@ namespace SoftEvolution
         {
             clsDatosProducto produ = new clsDatosProducto(); //objeto de la clase de conexion
             dgvProductos.DataSource = produ.getProducto(); //muestra los datos en el datagridview
+            //Código para adaptar el datagridview al tamaño de la ventana
+            //dgvProductos.Left = this.Left + 25;
+            //dgvProductos.Height = this.Height - dgvProductos.Top - 100;
+            //dgvProductos.Width = this.Width - 50;
         }
 
 

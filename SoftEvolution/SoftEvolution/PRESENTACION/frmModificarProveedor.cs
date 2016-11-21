@@ -130,8 +130,12 @@ namespace SoftEvolution
                 e.Handled = false;//no realiza ningún bloqueo
             }
         }
+
         #endregion
 
-        
+        private void frmModificarProveedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
