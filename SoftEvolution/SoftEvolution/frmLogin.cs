@@ -79,5 +79,51 @@ namespace SoftEvolution
                 return true;
             }
         }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if (CajasLlenas())
+                {
+                    if (login(txtUsuario.Text, txtContraseña.Text))
+                    {
+                        MessageBox.Show("ENTRO");
+                        usuario.Text = "Usuario: " + txtUsuario.Text;
+                        MessageBox.Show("MOSTRAR Y OCULTAR ELEMENTOS");
+                        this.Close();
+                        limpiarCajas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO ENTRO");
+                        limpiarCajas();
+                    }
+                }
+            }
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if (CajasLlenas())
+                {
+                    if (login(txtUsuario.Text, txtContraseña.Text))
+                    {
+                        MessageBox.Show("ENTRO");
+                        usuario.Text = "Usuario: " + txtUsuario.Text;
+                        MessageBox.Show("MOSTRAR Y OCULTAR ELEMENTOS");
+                        this.Close();
+                        limpiarCajas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("NO ENTRO");
+                        limpiarCajas();
+                    }
+                }
+            }
+        }
     }
 }
