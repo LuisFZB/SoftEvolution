@@ -32,5 +32,13 @@ namespace SoftEvolution
             login.MdiParent = this;
             login.Show();
         }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+            // COMPRAS
+            frmCompras compras = new frmCompras(toolStripLabel_Usuario);
+            compras.MdiParent = this;
+            compras.Show();
+        }
     }
 }

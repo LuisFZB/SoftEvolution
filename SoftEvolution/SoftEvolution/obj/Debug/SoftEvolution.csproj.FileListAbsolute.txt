@@ -186,3 +186,4 @@ C:\Users\cuen-\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\bin\De
 C:\Users\cuen-\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\bin\Debug\MySql.Data.xml
 C:\Users\cuen-\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmLogin.resources
 C:\Users\cuen-\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmMain.resources
+C:\Users\cuen-\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmCompras.resources

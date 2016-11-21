@@ -68,5 +68,185 @@ namespace SoftEvolution
         }
 
         # endregion
+
+        # region "METODOS GABRIEL"
+
+        /// <summary>
+        /// METODO QUE RECOLECTA LOS DATOS DEL ARTICULO QUE SE DESEA COMPRAR.
+        /// </summary>
+        /// <param name="Codigo"></param> // PARAMETRO QUE CONTIENE EL CODIGO DEL PRODUCTO QUE SE DESEA COMPRAR.
+        /// <returns>
+        /// RETORNA UN ARREGLO DE STRINGS QUE CONTIENE LA INFORMACION NECESARIA DEL PRODUCTO QUE SE DESEA COMPRAR.
+        /// </returns>
+        public string[] Articulo(string Codigo)
+        {
+            try
+            {
+                string[] DatosProducto = new string[3];
+
+                string comandoSql;
+                MySqlCommand comando = new MySqlCommand();
+                MySqlDataReader dr;
+                Conectar();
+
+
+                comandoSql = "select codigo, producto, precio_compra from productos where codigo = @CODIGO;";
+                comando.Parameters.AddWithValue("@CODIGO", Codigo);
+                comando.CommandText = comandoSql;
+                comando.CommandType = CommandType.Text;
+                comando.Connection = cnConexion;
+                dr = comando.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    dr.Read();
+
+                    DatosProducto[0] = dr.GetString(0);
+                    DatosProducto[1] = dr.GetString(1);
+                    DatosProducto[2] = Convert.ToString(dr.GetDouble(2));
+
+                    Cerrar();
+                    return DatosProducto;
+                }
+                else
+                {
+                    Cerrar();
+                    return null;
+                }
+            }
+            catch
+            {
+                Cerrar();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// METODO QUE VERIFICA SI EL PRODUCTO QUE SE DESEA COMPRAR YA ESTA REGISTRADO EL EL SISTEMA.
+        /// </summary>
+        /// <param name="Codigo"></param> // PARAMETRO QUE CONTIENE EL CODIGO DEL PRODUCTO A VERIFICAR.
+        /// <returns>
+        /// RETORNA UN VERDADERO SI EL PRODUCTO ESTA REGISTRADO Y UN VALOR NULL EN CASO CONTRARIO.
+        /// </returns>
+        public bool ProductoRegistrado(string Codigo)
+        {
+            try
+            {
+                string comandoSql;
+                MySqlCommand comando = new MySqlCommand();
+                MySqlDataReader dr;
+                Conectar();
+
+
+                comandoSql = "select count(codigo) from productos where codigo = @CODIGO;";
+                comando.Parameters.AddWithValue("@CODIGO", Codigo);
+                comando.CommandText = comandoSql;
+                comando.CommandType = CommandType.Text;
+                comando.Connection = cnConexion;
+                dr = comando.ExecuteReader();
+
+                dr.Read();
+
+                if (dr.GetInt32(0) == 1)
+                {
+                    Cerrar();
+                    return true;
+                }
+                else
+                {
+                    Cerrar();
+                    return false;
+                }
+            }
+            catch
+            {
+                Cerrar();
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// METODO QUE EXTRAE EL ULTIMO FOLIO REGISTRADO DE LA COMPRA.
+        /// </summary>
+        /// <returns>
+        /// RETORNA EL ULTIMO FOLIO REGISTRADO.
+        /// </returns>
+        public int UltimoFolio()
+        {
+            int Folio;
+
+            string comandoSql;
+            MySqlCommand comando = new MySqlCommand();
+            MySqlDataReader dr;
+            Conectar();
+
+
+            comandoSql = "select codigo from compras order by codigo desc limit 1;";
+            comando.CommandText = comandoSql;
+            comando.CommandType = CommandType.Text;
+            comando.Connection = cnConexion;
+            dr = comando.ExecuteReader();
+
+            dr.Read();
+
+            Folio = dr.GetInt32(0);
+
+            Cerrar();
+            return Folio;
+        }
+
+        /// <summary>
+        /// METODO PARA OBTENER LOS DATOS DEL USUARIO LOGEADO
+        /// </summary>
+        /// <param name="Usuario"></param> PARAMETRO QUE CONTIENE EL NOMBRE DEL USUARIO QUE ESTA LOGEADO
+        /// <returns>
+        /// RETORNA UN ARREGLO DE STRINGS QUE CONTIENE TODOS LOS DATOS DEL USUARIO.
+        /// </returns>
+        public string[] DatosUsuario(string Usuario)
+        {
+            try
+            {
+                string[] DatosUsuario = new string[3];
+
+                string sql;
+                MySqlCommand cm = new MySqlCommand();
+                MySqlDataReader dr;
+
+                Conectar();
+
+                sql = "select tipo, nombres, apellidos from usuarios where usuario = @USUARIO;";
+
+                cm.CommandText = sql;
+                cm.CommandType = CommandType.Text;
+                cm.Parameters.AddWithValue("@USUARIO", Usuario);
+                cm.Connection = cnConexion;
+                dr = cm.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    dr.Read();
+                    DatosUsuario[0] = dr.GetString(0);
+                    DatosUsuario[1] = dr.GetString(1);
+                    DatosUsuario[2] = dr.GetString(2);
+
+                    Cerrar();
+                    return DatosUsuario;
+                }
+                else
+                {
+                    Cerrar();
+                    return null;
+                }
+            }
+            catch
+            {
+                Cerrar();
+                return null;
+            }
+
+
+        }
+
+        # endregion
     }
 }
