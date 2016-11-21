@@ -10,7 +10,7 @@ namespace SoftEvolution
 {
     class clsConexion
     {
-        private MySqlConnection cnConexion = new MySqlConnection();
+        protected MySqlConnection cnConexion = new MySqlConnection();
 
         public void Conectar()
         {

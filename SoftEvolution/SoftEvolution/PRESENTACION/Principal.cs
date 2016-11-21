@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SoftEvolution
 {
-    public partial class Principal : Form
+    public partial class frmPrincipal : Form
     {
-        public Principal()
+        public frmPrincipal()
         {
             InitializeComponent();
         }

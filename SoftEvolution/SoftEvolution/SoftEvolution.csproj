@@ -48,11 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CONSULTAS.cs" />
     <Compile Include="DATOS\clsConexion.cs" />
     <Compile Include="DATOS\clsDatosInventario.cs" />
     <Compile Include="DATOS\clsDatosOrdenes.cs" />
     <Compile Include="DATOS\clsDatosProducto.cs" />
     <Compile Include="DATOS\UsuariosDAL.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="POJOS\clsInventario.cs" />
     <Compile Include="POJOS\clsOrdenes.cs" />
     <Compile Include="POJOS\clsProductos.cs" />
@@ -135,6 +148,12 @@
     <Compile Include="POJOS\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRESENTACION\Corte de caja.resx">
       <DependentUpon>Corte de caja.cs</DependentUpon>
     </EmbeddedResource>

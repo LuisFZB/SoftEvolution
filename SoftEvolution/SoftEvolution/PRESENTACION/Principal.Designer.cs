@@ -1,6 +1,6 @@
 ﻿namespace SoftEvolution
 {
-    partial class Principal
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.

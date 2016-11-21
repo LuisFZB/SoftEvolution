@@ -229,7 +229,7 @@ namespace SoftEvolution
 
         private void regresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Principal a = new Principal();
+            frmPrincipal a = new frmPrincipal();
             a.Show();
             Hide();
         }
