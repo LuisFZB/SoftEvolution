@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CONSULTAS.cs" />
-    <Compile Include="DAOVentas.cs" />
+    <Compile Include="DATOS\DAOVentas.cs" />
     <Compile Include="DATOS\clsConexion.cs" />
     <Compile Include="DATOS\clsDatosInventario.cs" />
     <Compile Include="DATOS\clsDatosOrdenes.cs" />
@@ -155,13 +155,13 @@
     <Compile Include="POJOS\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ventas.cs">
+    <Compile Include="PRESENTACION\Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas.Designer.cs">
+    <Compile Include="PRESENTACION\Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
-    <Compile Include="VentasPojos.cs" />
+    <Compile Include="POJOS\VentasPojos.cs" />
     <EmbeddedResource Include="frmCompras.resx">
       <DependentUpon>frmCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,7 +217,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Ventas.resx">
+    <EmbeddedResource Include="PRESENTACION\Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
