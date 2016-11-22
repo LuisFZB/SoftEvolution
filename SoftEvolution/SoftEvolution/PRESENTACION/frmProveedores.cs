@@ -167,6 +167,11 @@ namespace SoftEvolution
         }
         #endregion
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
 
         /*private void Buscar(string Folio)
         {
