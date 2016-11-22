@@ -11,20 +11,22 @@ namespace SoftEvolution
     class DAOVentas
     {
         private MySqlConnection conexion = new MySqlConnection();
-
+        //conexion a la base de datos
         public void conectar()
         {
             string cadena;
-            cadena = "SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=" + "evolutiongym1" + ";UID=" + "root" + ";PWD=EDW95";
+            cadena = "SERVER=" + "localhost" + ";PORT=3306" + ";DATABASE=" + "evolutiongym" + ";UID=" + "root" + ";PWD=EDW95";
             conexion.ConnectionString = cadena;
             conexion.Open();
 
         }
+
+        //metodo para cerrar la conexion
         public void cerrar()
         {
             conexion.Close();
         }
-
+        // metodo para hacer la busqueda de un producto atraves del codigo
         public VentasPojos getProductById(string Codigo)
         {
             VentasPojos objProduct = new VentasPojos();
@@ -55,6 +57,7 @@ namespace SoftEvolution
             }
 
         }
+        //busqueda del producto cuando el precio es de entrenador
         public VentasPojos PrecioEntrenador(string Codigo)
         {
             VentasPojos objProduct = new VentasPojos();
@@ -84,6 +87,7 @@ namespace SoftEvolution
             }
 
         }
+        //busqueda del producto cuando el precio es de Mayoreo
         public VentasPojos PrecioMayoreo(string Codigo)
         {
             VentasPojos objProduct = new VentasPojos();
@@ -113,7 +117,7 @@ namespace SoftEvolution
             }
 
         }
-
+        //metodo para obtener el mayor numero del folio
         public List<VentasPojos> List()
         {
 
@@ -140,7 +144,7 @@ namespace SoftEvolution
             return lista;
 
         }
-
+        //metodo para insertar la venta a la tabla  ventas
         public void insertar(VentasPojos objVentas)
         {
             string sql;
@@ -161,7 +165,7 @@ namespace SoftEvolution
             cm.ExecuteNonQuery();
             cerrar();
         }
-
+            //inserta venta a la tabla detalles de venta
         public void insertarDetalle(VentasPojos objVentas)
         {
             string sql;
@@ -183,6 +187,7 @@ namespace SoftEvolution
             cm.ExecuteNonQuery();
             cerrar();
         }
+        // metodo para actualizar el valor de cantidad en la tabla ventas y total,  funciona cuando las llaves compuestas se repiten
         public VentasPojos modificar(ref VentasPojos P)
         {
 
@@ -194,7 +199,7 @@ namespace SoftEvolution
             return P;
 
         }
-
+    //metodo para hacer la disminucion de existencia de un producto
         public VentasPojos modificarProducto(ref VentasPojos P)
         {
             conectar();

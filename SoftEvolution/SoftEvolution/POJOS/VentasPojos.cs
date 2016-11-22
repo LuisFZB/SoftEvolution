@@ -8,6 +8,7 @@ namespace SoftEvolution
 {
     class VentasPojos
     {
+        //variables para la obtencion e insercion a la base de datos
         private string Pcodigo;
         private string Pproducto;
         private double Pprecio_venta_menudeo;
@@ -17,7 +18,7 @@ namespace SoftEvolution
         private int Pcantidad;
         private double Ptotal;
         private int Pexistencia;
-
+        // getters & setters de cada variable
         public int existencia
         {
             get
