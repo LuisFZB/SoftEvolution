@@ -404,10 +404,10 @@ namespace SoftEvolution
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        /*private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
-        }
+        }*/
         //validaciones
         private void textBox6_KeyUp(object sender, KeyEventArgs e)
         {

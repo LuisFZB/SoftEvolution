@@ -190,3 +190,5 @@ C:\Users\cuen-\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\De
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmLogin.resources
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmMain.resources
 C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmPrincipal.resources
+C:\Users\cuen-\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Ventas.resources
+C:\Users\cuen-\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmAgregarCompras.resources

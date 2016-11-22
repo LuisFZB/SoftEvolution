@@ -20,12 +20,15 @@ namespace SoftEvolution
 
         # region "VARIABLES PARA EL FORMULARIO"
 
-        CONSULTAS consulta = new CONSULTAS();                   // INSTANCIA QUE MEPERMITE LLEGAR A LOS METODOS DE DICHA CLASS.
-
         string[] DetallesProducto;                              // ARREGLO QUE CONTIENE LOS DATOS DEL PRODUCTO QUE SE DESEA COMPRAR.
         string[] DetallesUsuario;                               // ARREGLO QUE CONTIENE LOS DATOS DEL USUARIO QUE SE HA LOGEADO.
         ToolStripLabel usuario;                                 // VARIBLE QUE CONTIENE LAS PROPIEDADES DEL TOOLSTRIPLABEL DEL USUARIO.
-        string user;
+        string user;                                            //
+        string UltimoCodigo;                                    // VARIABLE QUE GUARDA EL CODIGO DEL ULTIMO PRODUCTO QUE SE AGREGO AL LISTVIEW.
+        ListViewItem ItemProducto = null;                       // VARIABLE DE TIPO ITEM PARA MANEJO DE LOS DATOS EN EL LISTVIEW.
+
+        CONSULTAS consulta = new CONSULTAS();                   // INSTANCIA QUE MEPERMITE LLEGAR A LOS METODOS DE DICHA CLASS.
+        frmAgregarCompras AgregarCantidad;                      //INSTANCIA PARA MOSTRAR Y MANDAR VALORES AL FORMULARIO DE AGRECAR COMPRAS.
 
         # endregion
 
@@ -66,19 +69,37 @@ namespace SoftEvolution
         /// </summary>
         private void LlenarListView()
         {
-            DetallesProducto = consulta.Articulo(txtCodigo.Text);
+            if (lstProductos.Items.Count > 0)
+            {
+                ItemProducto = lstProductos.FindItemWithText(txtCodigo.Text, false, 0);
+            }
 
-            ListViewItem item = new ListViewItem();
+            if (ItemProducto != null)
+            {
+                lstProductos.BeginUpdate();
+                lstProductos.Items[ItemProducto.Index].SubItems[2].Text = Convert.ToString(Convert.ToInt32(lstProductos.Items[ItemProducto.Index].SubItems[2].Text) + Convert.ToInt32(txtCantidad.Text));
+                lstProductos.Items[ItemProducto.Index].SubItems[4].Text = Convert.ToString(Convert.ToInt32(lstProductos.Items[ItemProducto.Index].SubItems[2].Text) * Convert.ToDouble(lstProductos.Items[ItemProducto.Index].SubItems[3].Text));
+                lstProductos.EndUpdate();
 
-            item.SubItems.Add(txtCodigo.Text);
-            item.SubItems.Add(DetallesProducto[1]);
-            item.SubItems.Add(txtCantidad.Text);
-            item.SubItems.Add(DetallesProducto[2]);
-            item.SubItems.Add(Convert.ToString(Convert.ToInt32(txtCantidad.Text) * Convert.ToDouble(DetallesProducto[2])));
-            lstProductos.Items.Add(item);
+                lblTotal.Text = "$" + Convert.ToString(Convert.ToDouble(lblTotal.Text.Replace("$", "")) + (Convert.ToDouble(lstProductos.Items[ItemProducto.Index].SubItems[3].Text) * Convert.ToDouble(txtCantidad.Text)));
+            }
+            else
+            {
+                DetallesProducto = consulta.Articulo(txtCodigo.Text);
+
+                ListViewItem item = new ListViewItem(txtCodigo.Text);
+
+                item.SubItems.Add(DetallesProducto[1]);
+                item.SubItems.Add(txtCantidad.Text);
+                item.SubItems.Add(DetallesProducto[2]);
+                item.SubItems.Add(Convert.ToString(Convert.ToInt32(txtCantidad.Text) * Convert.ToDouble(DetallesProducto[2])));
+                lstProductos.Items.Add(item);
+
+                lblTotal.Text = "$" + Convert.ToString(Convert.ToDouble(lblTotal.Text.Replace("$", "")) + (Convert.ToDouble(DetallesProducto[2]) * Convert.ToDouble(txtCantidad.Text)));// CAMBIAR
+            }
 
             lblArticulos.Text = Convert.ToString(Convert.ToInt32(lblArticulos.Text) + Convert.ToInt32(txtCantidad.Text));
-            lblTotal.Text = "$" + Convert.ToString(Convert.ToDouble(lblTotal.Text.Replace("$", "")) + (Convert.ToDouble(DetallesProducto[2]) * Convert.ToDouble(txtCantidad.Text)));
+            UltimoCodigo = txtCodigo.Text;
         }
 
         /// <summary>
@@ -139,6 +160,25 @@ namespace SoftEvolution
         private void frmCompras_Load(object sender, EventArgs e)
         {
             ValoresIniciales();
+        }
+
+        private void txtCodigo_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Control) + Convert.ToInt32(Keys.A))
+            {
+                if (lstProductos.Items.Count > 0)
+                {
+                    ItemProducto = lstProductos.FindItemWithText(UltimoCodigo, false, 0);
+
+                    //frmAgregarCompras AgregarCantidad = new frmAgregarCompras(lstProductos.Items[ItemProducto.Index].SubItems[0].ToString(), lstProductos.Items[ItemProducto.Index].SubItems[1].ToString(), lstProductos.Items[ItemProducto.Index].SubItems[3].ToString(), lstProductos.Items[ItemProducto.Index].SubItems[2].ToString());
+                    AgregarCantidad = new frmAgregarCompras(lstProductos, ItemProducto, lblArticulos, lblTotal);
+                    AgregarCantidad.Show();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha agregado ningun producto.", "INVALIDO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

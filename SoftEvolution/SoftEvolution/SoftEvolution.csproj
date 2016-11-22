@@ -55,6 +55,12 @@
     <Compile Include="DATOS\clsDatosOrdenes.cs" />
     <Compile Include="DATOS\clsDatosProducto.cs" />
     <Compile Include="DATOS\UsuariosDAL.cs" />
+    <Compile Include="frmAgregarCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarCompras.Designer.cs">
+      <DependentUpon>frmAgregarCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="POJOS\VentasPojos.cs" />
+    <EmbeddedResource Include="frmAgregarCompras.resx">
+      <DependentUpon>frmAgregarCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCompras.resx">
       <DependentUpon>frmCompras.cs</DependentUpon>
     </EmbeddedResource>
