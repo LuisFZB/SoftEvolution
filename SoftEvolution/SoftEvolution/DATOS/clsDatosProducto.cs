@@ -117,9 +117,9 @@ namespace SoftEvolution
             cm.Parameters.AddWithValue("@precio_venta_menudeo", objProducto.Precio_Venta_Menudeo);
             cm.Parameters.AddWithValue("@precio_venta_mayoreo", objProducto.Precio_Venta_Mayoreo);
             cm.Parameters.AddWithValue("@precio_venta_instructor", objProducto.Precio_Venta_Instructor);
-       //     cm.Parameters.AddWithValue("@cantidad", objProducto.Cantidad);
+           cm.Parameters.AddWithValue("@cantidad", objProducto.Cantidad);
             //ingresamos a la variable el escript de la base de datos
-            sql = "INSERT INTO productos (codigo, producto, marca, categoria, detalles, precio_compra, precio_venta_menudeo, precio_venta_mayoreo, precio_venta_instructor, cantidad ) VALUES (@codigo, @producto, @marca, @categoria, @detalles, @precio_compra, @precio_venta_menudeo, @precio_venta_mayoreo, @precio_venta_instructor, @1)";
+            sql = "INSERT INTO productos (codigo, producto, marca, categoria, detalles, precio_compra, precio_venta_menudeo, precio_venta_mayoreo, precio_venta_instructor, cantidad ) VALUES (@codigo, @producto, @marca, @categoria, @detalles, @precio_compra, @precio_venta_menudeo, @precio_venta_mayoreo, @precio_venta_instructor, 0)";
             //pasamos el escript para realizar la consulta
             cm.CommandText = sql;
             cm.CommandType = CommandType.Text;
