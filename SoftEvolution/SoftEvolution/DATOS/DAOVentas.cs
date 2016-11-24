@@ -134,7 +134,16 @@ namespace SoftEvolution
             while (dr.Read())
             {
                 VentasPojos objCorte = new VentasPojos();
-                objCorte.folio = dr.GetInt32("folio");
+                if (objCorte.folio == 0)
+                {
+                    objCorte.folio = 0;
+                }
+                else
+                {
+                    objCorte.folio = dr.GetInt32("folio");
+                }
+
+
 
                 lista.Add(objCorte);
             }

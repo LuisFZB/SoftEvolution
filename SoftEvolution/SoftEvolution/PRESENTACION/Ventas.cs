@@ -168,91 +168,100 @@ namespace SoftEvolution
         {
             //variable para el almacenamiento del cambio
             double cambio;
+
             //evento para insertar la venta
             if (e.KeyValue == (char)Keys.F7)
             {
-                // validacion en caso de que el usuario no ingrese valor
-                if (txtPago.Text == "")
+                try
                 {
-                    MessageBox.Show("ingresa un valor");
-                }
-                else
-                {
-                    //operacion para mostrar el cambio
-                    double pago = double.Parse(txtPago.Text);
-                    // validacion en caso de que el usuario no cubra el total de la venta
-                    if (pago < totalReal)
+                    // validacion en caso de que el usuario no ingrese valor
+                    if (txtPago.Text == "")
                     {
-                        MessageBox.Show("importe incorrecto");
+                        MessageBox.Show("ingresa un valor");
                     }
                     else
                     {
-                        //mostrar el cambio
-                        cambio = pago - totalReal;
-                        label6.Text = "$" + cambio.ToString();
-                        //tamaño de la lista
-                        int tamaño = listView1.Items.Count;
-                        DAOVentas datos = new DAOVentas();
-                        VentasPojos pojos = new VentasPojos();
-                        //llena los datos para insertarlos a la tabla de ventas
-                        pojos.folio = Int32.Parse(label12.Text);
-                        pojos.usuario = textBox3.Text;
-                        pojos.fecha = label14.Text + " " + label15.Text;
-                        pojos.cantidad = Int32.Parse(label5.Text);
-                        pojos.total = double.Parse(label8.Text);
-                        //pasa los datos para llenar la tabla ventas
-                        datos.insertar(pojos);
-                        //recorre el listview para hacer la disminucion de existencias en la base de datos
-                        for (int i = 0; i < tamaño; i++)
+                        //operacion para mostrar el cambio
+                        double pago = double.Parse(txtPago.Text);
+                        // validacion en caso de que el usuario no cubra el total de la venta
+                        if (pago < totalReal)
                         {
-                            if (listView1.Items[i].SubItems[0].Text != "")
-                            {
-                                pojos.codigo = listView1.Items[i].SubItems[0].Text;
-                                pojos.cantidad = Int32.Parse(listView1.Items[i].SubItems[2].Text);
-                                datos.modificarProducto(ref pojos);
-
-                                try
-                                {
-                                    //recorre el listview para hacer el llenado de la tabla detalles de venta
-                                    pojos.folio = Int32.Parse(label12.Text);
-                                    pojos.codigo = listView1.Items[i].SubItems[0].Text;
-                                    pojos.producto = listView1.Items[i].SubItems[1].Text;
-                                    pojos.cantidad = Int32.Parse(listView1.Items[i].SubItems[2].Text);
-                                    pojos.precio_venta_menudeo = Int32.Parse(listView1.Items[i].SubItems[3].Text);
-                                    pojos.total = Int32.Parse(listView1.Items[i].SubItems[4].Text);
-                                    datos.insertarDetalle(pojos);
-                                }
-                                    //TRY CATCH cuando encuentra llaves duplicadas 
-                                catch (Exception)
-                                {
-                                    // modifica el valor de cantidad y subtotal cuando encuentra llaves compuestas iguales
-                                    pojos.folio = Int32.Parse(label12.Text);
-                                    pojos.codigo = listView1.Items[i].SubItems[0].Text;
-                                    pojos.cantidad = Int32.Parse(listView1.Items[i].SubItems[2].Text);
-                                    pojos.total = Int32.Parse(listView1.Items[i].SubItems[4].Text);
-                                    datos.modificar(ref pojos);
-                                }
-
-                            }
+                            MessageBox.Show("importe incorrecto");
                         }
+                        else
+                        {
+                            //mostrar el cambio
+                            cambio = pago - totalReal;
+                            label6.Text = "$" + cambio.ToString();
+                            //tamaño de la lista
+                            int tamaño = listView1.Items.Count;
+                            DAOVentas datos = new DAOVentas();
+                            VentasPojos pojos = new VentasPojos();
+                            //llena los datos para insertarlos a la tabla de ventas
+                            pojos.folio = Int32.Parse(label12.Text);
+                            pojos.usuario = textBox3.Text;
+                            pojos.fecha = label14.Text + " " + label15.Text;
+                            pojos.cantidad = Int32.Parse(label5.Text);
+                            pojos.total = double.Parse(label8.Text);
+                            //pasa los datos para llenar la tabla ventas
+                            datos.insertar(pojos);
+                            //recorre el listview para hacer la disminucion de existencias en la base de datos
+                            for (int i = 0; i < tamaño; i++)
+                            {
+                                if (listView1.Items[i].SubItems[0].Text != "")
+                                {
+                                    pojos.codigo = listView1.Items[i].SubItems[0].Text;
+                                    pojos.cantidad = Int32.Parse(listView1.Items[i].SubItems[2].Text);
+                                    datos.modificarProducto(ref pojos);
 
-                        MessageBox.Show("venta realizada");
-                        //incrementa el valor del folio
-                        folio++;
-                        //limpia todo para una nueva venta
-                        label12.Text = folio.ToString();
-                        listView1.Items.Clear();
-                        label5.Text = "0";
-                        label8.Text = "$0.00";
-                        txtPago.Clear();
-                        label6.Text = "$0.00";
-                        comboBox1.Text = "";
-                        cantidad = 0;
-                        totalReal = 0;
-                        total = 0;
+                                    try
+                                    {
+                                        //recorre el listview para hacer el llenado de la tabla detalles de venta
+                                        pojos.folio = Int32.Parse(label12.Text);
+                                        pojos.codigo = listView1.Items[i].SubItems[0].Text;
+                                        pojos.producto = listView1.Items[i].SubItems[1].Text;
+                                        pojos.cantidad = Int32.Parse(listView1.Items[i].SubItems[2].Text);
+                                        pojos.precio_venta_menudeo = Int32.Parse(listView1.Items[i].SubItems[3].Text);
+                                        pojos.total = Int32.Parse(listView1.Items[i].SubItems[4].Text);
+                                        datos.insertarDetalle(pojos);
+                                    }
+                                    //TRY CATCH cuando encuentra llaves duplicadas 
+                                    catch (Exception)
+                                    {
+                                        // modifica el valor de cantidad y subtotal cuando encuentra llaves compuestas iguales
+                                        pojos.folio = Int32.Parse(label12.Text);
+                                        pojos.codigo = listView1.Items[i].SubItems[0].Text;
+                                        pojos.cantidad = Int32.Parse(listView1.Items[i].SubItems[2].Text);
+                                        pojos.total = Int32.Parse(listView1.Items[i].SubItems[4].Text);
+                                        datos.modificar(ref pojos);
+                                    }
 
+                                }
+                            }
+
+                            MessageBox.Show("venta realizada");
+                            //incrementa el valor del folio
+                            folio++;
+                            //limpia todo para una nueva venta
+                            label12.Text = folio.ToString();
+                            listView1.Items.Clear();
+                            label5.Text = "0";
+                            label8.Text = "$0.00";
+                            txtPago.Clear();
+                            label6.Text = "$0.00";
+                            comboBox1.Text = "";
+                            cantidad = 0;
+                            totalReal = 0;
+                            total = 0;
+
+                        }
                     }
                 }
+                catch (Exception)
+                {
+                    MessageBox.Show("Primero realice una venta");
+                }
+            
             }
         }
 
