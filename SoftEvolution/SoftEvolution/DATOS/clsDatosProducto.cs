@@ -27,6 +27,95 @@ namespace SoftEvolution
             conexion.Close(); //cierra la conexión
         }
         #region "Métodos de manipulación de datos"
+        public void AgregarProducto(clsProductos objProducto) //Método que agrega un producto
+        {
+            //definición de variables y objetos a utilizar
+            string sql;
+            MySqlCommand cm;
+            Conectar(); //llamado al método conectar para hacer la conexión
+
+            cm = new MySqlCommand();//inicializacion del objeto
+                                    //se le pasan los parametros de todos los campos al objeto de la base de datos
+            cm.Parameters.AddWithValue("@codigo", objProducto.Codigo);
+            cm.Parameters.AddWithValue("@producto", objProducto.Producto);
+            cm.Parameters.AddWithValue("@marca", objProducto.Marca);
+            cm.Parameters.AddWithValue("@categoria", objProducto.Categoria);
+            cm.Parameters.AddWithValue("@detalles", objProducto.Detalles);
+            cm.Parameters.AddWithValue("@precio_compra", objProducto.Precio_Compra);
+            cm.Parameters.AddWithValue("@precio_venta_menudeo", objProducto.Precio_Venta_Menudeo);
+            cm.Parameters.AddWithValue("@precio_venta_mayoreo", objProducto.Precio_Venta_Mayoreo);
+            cm.Parameters.AddWithValue("@precio_venta_instructor", objProducto.Precio_Venta_Instructor);
+            cm.Parameters.AddWithValue("@cantidad", objProducto.Cantidad);
+            //ingresamos a la variable el escript de la base de datos
+            sql = "INSERT INTO productos (codigo, producto, marca, categoria, detalles, precio_compra, precio_venta_menudeo, precio_venta_mayoreo, precio_venta_instructor, cantidad ) VALUES (@codigo, @producto, @marca, @categoria, @detalles, @precio_compra, @precio_venta_menudeo, @precio_venta_mayoreo, @precio_venta_instructor, 0)";
+            //pasamos el escript para realizar la consulta
+            cm.CommandText = sql;
+            cm.CommandType = CommandType.Text;
+            cm.Connection = conexion;
+            cm.ExecuteNonQuery();//ejecuta el escript
+            Cerrar(); //cierra la conexión
+        }
+        public void EliminarProducto(clsProductos objProducto) //método que elimina un producto
+        {
+            string sql;
+            MySqlCommand cm;
+            Conectar(); //conecta con la base de datos
+
+            try
+            {
+                cm = new MySqlCommand();//inicialización del objeto
+                sql = "DELETE FROM productos WHERE codigo = '" + objProducto.Codigo + "'"; //script de la consulta
+                cm.CommandText = sql;//pasamos la variable que contiene el script
+                cm.CommandType = CommandType.Text; ;//asignamos el tipo de comando
+                cm.Connection = conexion;//realiza la conexión
+                cm.ExecuteNonQuery();// ejecuta el script
+                Cerrar();//cierra la conexión
+                h = 1;
+            }
+            catch (MySqlException)
+            {
+                h = 0;
+            }
+
+        }
+        //public clsProductos getProductosById(string IDcodigo)
+        //{
+        //    clsProductos objProducto = new clsProductos();
+        //    string sql;
+        //    MySqlCommand cm = new MySqlCommand();
+        //    MySqlDataReader dr;
+        //    Conectar();//abre la conexion
+        //    realiza la consulta
+        //    sql = "SELECT * FROM productos WHERE codigo = @codigo";
+        //    cm.CommandText = sql;
+        //    cm.CommandType = CommandType.Text;
+        //    cm.Parameters.AddWithValue("@codigo", IDcodigo);//anade el id principal de la tabla de productos
+        //    cm.Connection = conexion;
+        //    dr = cm.ExecuteReader();
+        //    if (dr.HasRows)
+        //    {
+        //        dr.Read();
+        //        objProducto.Codigo = dr.GetString("codigo");
+        //        objProducto.Producto = dr.GetString("producto");
+        //        objProducto.Marca = dr.GetString("marca");
+        //        objProducto.Categoria = dr.GetString("categoria");
+        //        objProducto.Detalles = dr.GetString("detalles");
+        //        objProducto.Precio_Compra = dr.GetString("precio_compra");
+        //        objProducto.Precio_Venta_Menudeo = dr.GetString("precio_venta_menudeo");
+        //        objProducto.Precio_Venta_Mayoreo = dr.GetString("precio_venta_mayoreo");
+        //        objProducto.Precio_Venta_Instructor = dr.GetString("precio_venta_instructor");
+        //        objProducto.Cantidad = dr.GetString("cantidad");
+
+        //        Cerrar();
+        //        return objProducto;
+        //    }
+        //    else
+        //    {
+        //        Cerrar();
+        //        return null;
+        //    }
+        //}
+
         public List<clsProductos> getProducto() //obtiene todos los datos de la base de datos y returna una lista con todos los datos
         {
             List<clsProductos> lstProduc = new List<clsProductos>(); //lista que almacenara los datos
@@ -53,7 +142,7 @@ namespace SoftEvolution
                 objProducto.Precio_Venta_Mayoreo = dr.GetString("precio_venta_mayoreo");
                 objProducto.Precio_Venta_Instructor = dr.GetString("precio_venta_instructor");
                 objProducto.Cantidad = dr.GetString("cantidad");
-               
+
 
                 lstProduc.Add(objProducto);//añade los datos a la lista
             }
@@ -62,129 +151,52 @@ namespace SoftEvolution
         }
 
 
-        public clsProductos getProductosById(string IDcodigo)
-        {
-            clsProductos objProducto = new clsProductos();
-            string sql;
-            MySqlCommand cm = new MySqlCommand();
-            MySqlDataReader dr;
-            Conectar();//abre la conexion
-            //realiza la consulta
-            sql = "SELECT * FROM productos WHERE codigo = @codigo";
-            cm.CommandText = sql;
-            cm.CommandType = CommandType.Text;
-            cm.Parameters.AddWithValue("@codigo", IDcodigo);//anade el id principal de la tabla de productos
-            cm.Connection = conexion;
-            dr = cm.ExecuteReader();
-            if (dr.HasRows)
-            {
-                dr.Read();
-                objProducto.Codigo = dr.GetString("codigo");
-                objProducto.Producto = dr.GetString("producto");
-                objProducto.Marca = dr.GetString("marca");
-                objProducto.Categoria = dr.GetString("categoria");
-                objProducto.Detalles = dr.GetString("detalles");
-                objProducto.Precio_Compra = dr.GetString("precio_compra");
-                objProducto.Precio_Venta_Menudeo = dr.GetString("precio_venta_menudeo");
-                objProducto.Precio_Venta_Mayoreo = dr.GetString("precio_venta_mayoreo");
-                objProducto.Precio_Venta_Instructor = dr.GetString("precio_venta_instructor");
-                objProducto.Cantidad = dr.GetString("cantidad");
-                
-                Cerrar();
-                return objProducto;
-            }
-            else
-            {
-                Cerrar();
-                return null;
-            }
-        }
-        public void AgregarProducto(clsProductos objProducto) //Método que agrega un producto
-        {
-            //definición de variables y objetos a utilizar
-            string sql;
-            MySqlCommand cm;
-            Conectar(); //llamado al método conectar para hacer la conexión
 
-            cm = new MySqlCommand();//inicializacion del objeto
-                                    //se le pasan los parametros de todos los campos al objeto de la base de datos
-            cm.Parameters.AddWithValue("@codigo", objProducto.Codigo);
-            cm.Parameters.AddWithValue("@producto", objProducto.Producto);
-            cm.Parameters.AddWithValue("@marca", objProducto.Marca);
-            cm.Parameters.AddWithValue("@categoria", objProducto.Categoria);
-            cm.Parameters.AddWithValue("@detalles", objProducto.Detalles);
-            cm.Parameters.AddWithValue("@precio_compra", objProducto.Precio_Compra);
-            cm.Parameters.AddWithValue("@precio_venta_menudeo", objProducto.Precio_Venta_Menudeo);
-            cm.Parameters.AddWithValue("@precio_venta_mayoreo", objProducto.Precio_Venta_Mayoreo);
-            cm.Parameters.AddWithValue("@precio_venta_instructor", objProducto.Precio_Venta_Instructor);
-           cm.Parameters.AddWithValue("@cantidad", objProducto.Cantidad);
-            //ingresamos a la variable el escript de la base de datos
-            sql = "INSERT INTO productos (codigo, producto, marca, categoria, detalles, precio_compra, precio_venta_menudeo, precio_venta_mayoreo, precio_venta_instructor, cantidad ) VALUES (@codigo, @producto, @marca, @categoria, @detalles, @precio_compra, @precio_venta_menudeo, @precio_venta_mayoreo, @precio_venta_instructor, 0)";
-            //pasamos el escript para realizar la consulta
-            cm.CommandText = sql;
-            cm.CommandType = CommandType.Text;
-            cm.Connection = conexion;
-            cm.ExecuteNonQuery();//ejecuta el escript
-            Cerrar(); //cierra la conexión
-        }
 
-        public void ModificarProducto(clsProductos objProducto) //metodo para modificar los datos del producto
+        public clsProductos ModificarProducto(ref clsProductos P) //metodo para modificar los datos del producto
         {
-            string sql;
-            MySqlCommand cm;
             Conectar(); //conecta con la base de datos
-
-            cm = new MySqlCommand();//inicializacion del objeto
-                                    //se le pasan los parametros de todos los campos al objeto de la base de datos
-            cm.Parameters.AddWithValue("@codigo", objProducto.Codigo);
-            cm.Parameters.AddWithValue("@producto", objProducto.Producto);
-            cm.Parameters.AddWithValue("@marca", objProducto.Marca);
-            cm.Parameters.AddWithValue("@categoria", objProducto.Categoria);
-            cm.Parameters.AddWithValue("@detalles", objProducto.Detalles);
-            cm.Parameters.AddWithValue("@precio_compra", objProducto.Precio_Compra);
-            cm.Parameters.AddWithValue("@precio_venta_menudeo", objProducto.Precio_Venta_Menudeo);
-            cm.Parameters.AddWithValue("@precio_venta_mayoreo", objProducto.Precio_Venta_Mayoreo);
-            cm.Parameters.AddWithValue("@precio_venta_instructor", objProducto.Precio_Venta_Instructor);
-            cm.Parameters.AddWithValue("@cantidad", objProducto.Cantidad);
-            //ingresamos a la variable el escript de la base de datos
-            sql = "UPDATE productos SET codigo = @codigo, producto = @producto, marca = @marca, categoria = @categoria," +
-            "detalles = @detalles, precio_compra = @precio_compra, precio_venta_menudeo = @precio_venta_menudeo," +
-            "precio_venta_mayoreo = @precio_venta_mayoreo, precio_venta_instructor = @precio_venta_instructor, cantidad = @cantidad WHERE codigo = @codigo and cantidad = @cantidad";
-            cm.CommandText = sql;
-            cm.CommandType = CommandType.Text;
-            cm.Connection = conexion;
-            cm.ExecuteNonQuery();//ejecuta el escript
-            Cerrar();//cierra la conexión
+                        //ingresamos el script de la base de datos
+            string update = "UPDATE productos SET codigo='" + P.Codigo + "',nombre='" + P.Producto + "',marca='" + P.Marca + "',categoria='" + P.Categoria + "',detalles='" + P.Detalles + "',precio_compra='" + P.Precio_Compra
+           + "',precio_venta_menudeo='" + P.Precio_Venta_Menudeo + "',precio_venta_mayoreo='" + P.Precio_Venta_Mayoreo + "',precio_venta_instructor='" + P.Precio_Venta_Instructor + "',cantidad='" + P.Cantidad + "' WHERE Codigo=" + P.Codigo;
+            MySqlCommand miCom = new MySqlCommand(update, conexion); //objeto de MySQLCommand y se le pasa la cadena con la consulta y la conexion
+            miCom.ExecuteNonQuery(); //ejecuta el script de la consulta
+            miCom.Dispose();
+            conexion.Close(); //cierra la conexión
+            return P; //retorna la referencia de la clase
         }
 
-        public void EliminarProducto(clsProductos objProducto) //método que elimina un producto
+        public clsProductos buscarProducto(ref clsProductos produ) //método para buscar un dato en específico para modificarlo
         {
-            string sql;
-            MySqlCommand cm;
             Conectar(); //conecta con la base de datos
-
-            try
+            string consulta = "SELECT * FROM productos WHERE codigo =" + produ.Codigo; //script de la consulta
+            MySqlCommand miCom = new MySqlCommand(consulta, conexion); //pasamos el script y la coexion al objeto
+            MySqlDataReader midataReader = miCom.ExecuteReader(); //objeto para leer los datos de la base de datos
+            midataReader.Read(); //lee la base de datos
+            if (midataReader.HasRows) //codicion para obtener los datos en caso de que haya uno a buscar
             {
-                cm = new MySqlCommand();//inicialización del objeto
-                sql = "DELETE FROM productos WHERE codigo = '" + objProducto.Codigo + "'"; //script de la consulta
-                cm.CommandText = sql;//pasamos la variable que contiene el script
-                cm.CommandType = CommandType.Text; ;//asignamos el tipo de comando
-                cm.Connection = conexion;//realiza la conexión
-                cm.ExecuteNonQuery();// ejecuta el script
-                Cerrar();//cierra la conexión
-                h = 1;
-            }
-            catch (MySqlException)
-            {
-                h = 0;
-            }
+                //obtenemos los datos y los pasamos a la referencia de la clase que tiene los getters y setters
+                produ.Codigo = midataReader["codigo"].ToString();
+                produ.Producto = midataReader["producto"].ToString();
+                produ.Marca = midataReader["marca"].ToString();
+                produ.Categoria = midataReader["categoria"].ToString();
+                produ.Detalles = midataReader["detalles"].ToString();
+                produ.Precio_Compra = midataReader["precio_compra"].ToString();
+                produ.Precio_Venta_Menudeo = midataReader["precio_venta_menudeo"].ToString();
+                produ.Precio_Venta_Mayoreo = midataReader["precio_venta_mayoreo"].ToString();
+                produ.Precio_Venta_Instructor = midataReader["precio_venta_instructor"].ToString();
+                produ.Cantidad = midataReader["cantidad"].ToString();
 
+            }
+            else //si no hay ningun dato a buscar
+            {
+                return null; //no retornamos nada ya que no hay dato a busucar
+            }
+            midataReader.Close(); //cerramos la lectura 
+            miCom.Dispose(); //cerramos el command
+            conexion.Close(); //cerramos la connexión
+            return produ; //retornamos la referencia de la clase
         }
-
-
-
-
-
 
         public List<clsProductos> buscar(string codigo) //método para buscar datos en la base de datos que retorna la lista con los datos
         {
@@ -227,37 +239,7 @@ namespace SoftEvolution
         }
 
 
-        public clsProductos buscarProducto(ref clsProductos produ) //método para buscar un dato en específico para modificarlo
-        {
-            Conectar(); //conecta con la base de datos
-            string consulta = "SELECT * FROM productos WHERE codigo =" + produ.Codigo; //script de la consulta
-            MySqlCommand miCom = new MySqlCommand(consulta, conexion); //pasamos el script y la coexion al objeto
-            MySqlDataReader midataReader = miCom.ExecuteReader(); //objeto para leer los datos de la base de datos
-            midataReader.Read(); //lee la base de datos
-            if (midataReader.HasRows) //codicion para obtener los datos en caso de que haya uno a buscar
-            {
-                //obtenemos los datos y los pasamos a la referencia de la clase que tiene los getters y setters
-                produ.Codigo = midataReader["codigo"].ToString();
-                produ.Producto = midataReader["producto"].ToString();
-                produ.Marca = midataReader["marca"].ToString();
-                produ.Categoria = midataReader["categoria"].ToString();
-                produ.Detalles = midataReader["detalles"].ToString();
-                produ.Precio_Compra = midataReader["precio_compra"].ToString();
-                produ.Precio_Venta_Menudeo = midataReader["precio_venta_menudeo"].ToString();
-                produ.Precio_Venta_Mayoreo = midataReader["precio_venta_mayoreo"].ToString();
-                produ.Precio_Venta_Instructor = midataReader["precio_venta_instructor"].ToString();
-                produ.Cantidad = midataReader["cantidad"].ToString();
 
-            }
-            else //si no hay ningun dato a buscar
-            {
-                return null; //no retornamos nada ya que no hay dato a busucar
-            }
-            midataReader.Close(); //cerramos la lectura 
-            miCom.Dispose(); //cerramos el command
-            conexion.Close(); //cerramos la connexión
-            return produ; //retornamos la referencia de la clase
-        }
 
         #endregion
 

@@ -22,65 +22,7 @@ namespace SoftEvolution
 
         private void FrmModificarProducto_Load(object sender, EventArgs e)
         {
-            if (Tipo.Text.Equals("Agregar"))
-            {
-                s = 1;
-            }
-            else if (Tipo.Text.Equals("Buscar"))
-            {
-                s = 2;
-                guardarToolStripMenuItem.Visible = false;
-                cancerlarToolStripMenuItem.Text = "Salir";
-                txtCodi.Enabled = false;
-                txtNom.Enabled = false;
-                txtMar.Enabled = false;
-                txtCate.Enabled = false;
-                txtDescrip.Enabled = false;
-                txtPC.Enabled = false;
-                txtPV.Enabled = false;
-                txtPM.Enabled = false;
-                txtPE.Enabled = false;
-                txtCantidad.Enabled = false;
-                clsProductos producto = datos.getProductosById(Buscar.Text);
-                try
-                {
-                    txtCodi.Text = Convert.ToString(producto.Codigo);
-                    txtNom.Text = producto.Producto;
-                    txtMar.Text = producto.Marca;
-                    txtCate.Text = producto.Categoria;
-                    txtDescrip.Text = producto.Detalles;
-                    txtPC.Text = producto.Precio_Compra;
-                    txtPV.Text =producto.Precio_Venta_Menudeo;
-                    txtPM.Text = producto.Precio_Venta_Mayoreo;
-                    txtPE.Text = producto.Precio_Venta_Instructor;
-                    txtCantidad.Text = producto.Cantidad;
-                   
-                }
-                catch (NullReferenceException)
-                {
-
-                }
-            }
-            else if (Tipo.Text.Equals("Actualizar"))
-            {
-                s = 3;
-                guardarToolStripMenuItem.Text = "Actualizar";
-                txtCodi.Enabled = false;
-                txtCantidad.Enabled = false;
-                clsProductos producto = datos.getProductosById(Buscar.Text);
-                txtCodi.Text = Convert.ToString(producto.Codigo);
-                txtNom.Text = producto.Producto;
-                txtMar.Text = producto.Marca;
-                txtCate.Text = producto.Categoria;
-                txtDescrip.Text = producto.Detalles;
-                txtPC.Text = producto.Precio_Compra;
-                txtPV.Text = producto.Precio_Venta_Menudeo;
-                txtPM.Text = producto.Precio_Venta_Mayoreo;
-                txtPE.Text = producto.Precio_Venta_Instructor;
-                txtCantidad.Text = producto.Cantidad;
-
-
-            }
+            
         }
 
         private void btncan_Click(object sender, EventArgs e)
@@ -218,55 +160,39 @@ namespace SoftEvolution
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (s == 1)
             {
+                //objetos de clsPoveedores y conexion
                 clsProductos producto = new clsProductos();
-                producto.Codigo = txtCodi.Text;
-                producto.Producto = txtNom.Text;
-                producto.Marca = txtMar.Text;
-                producto.Categoria = txtDescrip.Text;
-                producto.Detalles = txtDescrip.Text;
-                producto.Precio_Compra = txtPC.Text;
-                producto.Precio_Venta_Menudeo = txtPV.Text;
-                producto.Precio_Venta_Mayoreo = txtPM.Text;
-                producto.Precio_Venta_Instructor = txtPE.Text;
-                producto.Cantidad = txtCantidad.Text;
+                clsDatosProducto con = new clsDatosProducto();
 
-                if (!txtCodi.Text.Equals("") && !txtCantidad.Text.Equals(""))
-                {
-                    datos.AgregarProducto(producto);
-                    new frmProductos().Show();
-                    this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("Llene los campos obligatorios");
-                }
-            }
-            else if (s == 3)
-            {
-                clsProductos producto = new clsProductos();
+                //obtiene los datos de los cuadros de texto y los pasa a la clase clsProveedores
                 producto.Codigo = txtCodi.Text;
                 producto.Producto = txtNom.Text;
                 producto.Marca = txtMar.Text;
-                producto.Categoria = txtDescrip.Text;
-                producto.Detalles = txtDescrip.Text;
+                producto.Categoria = txtCate.Text;
                 producto.Precio_Compra = txtPC.Text;
                 producto.Precio_Venta_Menudeo = txtPV.Text;
                 producto.Precio_Venta_Mayoreo = txtPM.Text;
                 producto.Precio_Venta_Instructor = txtPE.Text;
                 producto.Cantidad = txtCantidad.Text;
-               
-                if (!txtCodi.Text.Equals("") && !txtCantidad.Text.Equals(""))
-                {
-                    datos.ModificarProducto(producto);
-                    new frmProductos().Show();
-                    this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("Llene los campos obligatorios");
-                }
+                producto.Detalles = txtDescrip.Text;
+                con.ModificarProducto(ref producto); //llamamos el metodo de modificar de la clase conexión y le pasamos la referencia de la clase con los datos 
+                MessageBox.Show("Producto actualizado", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //limpia los cuadros de texto
+                txtCodi.Clear();
+                txtNom.Clear();
+                txtMar.Clear();
+                txtCate.Clear();
+                txtPC.Clear();
+                txtPV.Clear();
+                txtPM.Clear();
+                txtPE.Clear();
+                txtCantidad.Clear();
+                txtDescrip.Clear();
+
+                this.Close(); //cierra la ventana
+                frmProductos pro = new frmProductos(); //objeto del catalogo de productos
+                pro.Show(); //abre la ventana de productos
             }
         }
 

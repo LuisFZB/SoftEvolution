@@ -26,24 +26,40 @@ namespace SoftEvolution
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            
             FrmAgregarProducto agregaProduct = new FrmAgregarProducto();
             agregaProduct.Show();
+            this.Dispose();
 
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmModificarProducto s = new FrmModificarProducto();
-            s.Tipo.Text = "Actualizar";
-            try
+            clsProductos Pro = new clsProductos();//objeto clsProveedores
+            clsDatosProducto con = new clsDatosProducto();//objeto de conexion
+            try //bloque try para que solo entre en caso de que se haya seleccionado un dato
             {
-                s.Buscar.Text = dgvProductos.Rows[dgvProductos.SelectedRows[0].Index].Cells[0].Value.ToString();
-                this.Hide();
-                s.Show();
-
+                //indica que tomara el id del dato seleccionado en el datagridview
+                Pro.Codigo = dgvProductos.Rows[dgvProductos.SelectedRows[0].Index].Cells[0].Value.ToString();
+                //llama al metodo getProveedor para obtener los datos
+                con.getProducto();
+                con.buscarProducto(ref Pro); //llama al metodo buscarProveedor para realizar la busqueda de ese dato
+                FrmModificarProducto x = new FrmModificarProducto();//objeto del formulario modificar
+                //pasamos los datos de la clase clsProveedores y los mostramos en los cuadros de texto del otro formulario
+                x.txtCodi.Text = Pro.Codigo.ToString();
+                x.txtNom.Text = Pro.Producto;
+                x.txtMar.Text = Pro.Marca;
+                x.txtCate.Text = Pro.Categoria;
+                x.txtPC.Text = Pro.Precio_Compra;
+                x.txtPV.Text = Pro.Precio_Venta_Menudeo;
+                x.txtPM.Text = Pro.Precio_Venta_Mayoreo;
+                x.txtPE.Text = Pro.Precio_Venta_Instructor;
+                x.txtCantidad.Text = Pro.Cantidad;
+                x.txtDescrip.Text = Pro.Detalles;
+                x.Show();//abrimos el formulario de modificar
+                this.Dispose();//ocultamos este formulario
             }
-            catch (ArgumentOutOfRangeException)
+            catch (Exception) //entra e caso de que no se haya seleccionado ningun dato y manda mensaje
             {
                 MessageBox.Show("Seleciona un registro");
             }

@@ -334,20 +334,20 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCodi;
-        private System.Windows.Forms.TextBox txtNom;
-        private System.Windows.Forms.TextBox txtMar;
-        private System.Windows.Forms.TextBox txtCate;
-        private System.Windows.Forms.TextBox txtPC;
-        private System.Windows.Forms.TextBox txtPV;
-        private System.Windows.Forms.TextBox txtPM;
-        private System.Windows.Forms.TextBox txtPE;
-        private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.TextBox txtDescrip;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripLabel1;
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancerlarToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox txtCodi;
+        public System.Windows.Forms.TextBox txtNom;
+        public System.Windows.Forms.TextBox txtMar;
+        public System.Windows.Forms.TextBox txtCate;
+        public System.Windows.Forms.TextBox txtPC;
+        public System.Windows.Forms.TextBox txtPV;
+        public System.Windows.Forms.TextBox txtPM;
+        public System.Windows.Forms.TextBox txtPE;
+        public System.Windows.Forms.TextBox txtCantidad;
+        public System.Windows.Forms.TextBox txtDescrip;
     }
 }

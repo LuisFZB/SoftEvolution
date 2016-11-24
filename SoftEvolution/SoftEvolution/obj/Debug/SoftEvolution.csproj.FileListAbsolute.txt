@@ -219,3 +219,5 @@ C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolu
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmPrincipal.resources
 C:\Users\Engelix-Infected\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Ventas.resources
 C:\Users\cuen-\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.frmRemoverCompras.resources
+C:\Users\Gonzalez\Source\Repos\SoftEvolution6\SoftEvolution\SoftEvolution\bin\Debug\SoftEvolution.exe.config
+C:\Users\Gonzalez\Source\Repos\SoftEvolution6\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.exe

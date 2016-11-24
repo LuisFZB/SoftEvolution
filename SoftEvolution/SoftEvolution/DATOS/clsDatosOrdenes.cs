@@ -128,7 +128,7 @@ namespace SoftEvolution
         public clsOrdenes buscarProducto(ref clsOrdenes inv)
         {
             Conectar();
-            string consulta = "SELECT * FROM productos WHERE codigo =" + inv.Codigo;
+            string consulta = "SELECT * FROM detalle_compra WHERE codigo =" + inv.Codigo;
             MySqlCommand miCom = new MySqlCommand(consulta, cnConexion);
             MySqlDataReader midataReader = miCom.ExecuteReader();
             midataReader.Read();
