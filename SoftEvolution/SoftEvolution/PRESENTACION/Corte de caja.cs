@@ -34,46 +34,51 @@ namespace SoftEvolution
             //objeto de la clase pojos
             PojosCorte pojos = new PojosCorte();
             //creacion de lista con los datos cargados de la consulta
-            List<PojosCorte> li= datos.ListCorte();
+            List<PojosCorte> li = datos.ListCorte();
             //condicion en caso de no encontrar valores en la consulta
-            if(li.Count==0){
+            if (li.Count == 0)
+            {
                 MessageBox.Show("No hay ventas registradas");
             }
-            else {
-
-            int con =0; //variable para almacenar la cantidad de ventas realizadas
-            double suma = 0; //variable para almacenar la cantidad de productos vendidos
-            int cant = 0;//variable para almacenar la suma total de las ventas
-            try
+            else
             {
-                //ciclo para recorer la lista y llenar el listview
-                foreach (PojosCorte po in li)
+
+                int con = 0; //variable para almacenar la cantidad de ventas realizadas
+                double suma = 0; //variable para almacenar la cantidad de productos vendidos
+                int cant = 0;//variable para almacenar la suma total de las ventas
+                try
                 {
+                    //ciclo para recorer la lista y llenar el listview
+                    foreach (PojosCorte po in li)
+                    {
 
-                    ListViewItem lista = new ListViewItem(li[con].folio.ToString());
-                    lista.SubItems.Add(li[con].usuario);
-                    lista.SubItems.Add(li[con].codigo_producto);
+                        ListViewItem lista = new ListViewItem(li[con].folio.ToString());
+                        lista.SubItems.Add(li[con].usuario);
+                        //creacion de la lista para la busqueda en la tabla detalle_ventas
+                        List<PojosCorte> l0 = datos.getProductById(li[con].folio.ToString());
 
-                    lista.SubItems.Add(li[con].cantidad.ToString());
-                    lista.SubItems.Add(li[con].precio.ToString());
-                    lista.SubItems.Add(li[con].total.ToString());
-                    suma = suma + li[con].total;
-                    cant = cant + li[con].cantidad;
+                        lista.SubItems.Add(l0[0].producto);
+
+                        lista.SubItems.Add(li[con].cantidad.ToString());
+                        lista.SubItems.Add(l0[0].precio.ToString());
+                        lista.SubItems.Add(li[con].total.ToString());
+                        suma = suma + li[con].total;
+                        cant = cant + li[con].cantidad;
 
 
-                    listView1.Items.Add(lista);
+                        listView1.Items.Add(lista);
 
-                    con++;
+                        con++;
+                    }
+
+                    label5.Text = con.ToString();//la cantidad de ventas realizadas
+                    label6.Text = cant.ToString();//la cantidad de productos vendidos
+                    label7.Text = suma.ToString();// la suma total de las ventas
                 }
-
-                label5.Text = con.ToString();//la cantidad de ventas realizadas
-                label6.Text = cant.ToString();//la cantidad de productos vendidos
-                label7.Text = suma.ToString();// la suma total de las ventas
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error consulte al administrador");
-            }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error consulte al administrador");
+                }
             }
            
         }

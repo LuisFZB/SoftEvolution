@@ -213,3 +213,4 @@ C:\Users\Gonzalez\Source\Repos\SoftEvolution4\SoftEvolution\SoftEvolution\obj\De
 C:\Users\Gonzalez\Source\Repos\SoftEvolution4\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Properties.Resources.resources
 C:\Users\Gonzalez\Source\Repos\SoftEvolution4\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Ventas.resources
 C:\Users\Gonzalez\Source\Repos\SoftEvolution4\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.csproj.GenerateResource.Cache
+C:\Users\Laptop\Documents\GitHub\SoftEvolution\SoftEvolution\SoftEvolution\obj\Debug\SoftEvolution.Ventas.resources

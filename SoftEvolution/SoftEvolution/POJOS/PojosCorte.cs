@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace SoftEvolution
 {
     class PojosCorte
-
     {
         //variables para los campos de la base de datos
         private int Pfolio;
@@ -16,6 +15,7 @@ namespace SoftEvolution
         private int Pcantidad;
         private double PPunidad;
         private double Ptotal;
+
         //getters & setters para cada valor
         public int folio
         {
@@ -40,7 +40,7 @@ namespace SoftEvolution
                 Pusuario = value;
             }
         }
-        public string codigo_producto
+        public string producto
         {
             get
             {
