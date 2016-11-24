@@ -187,12 +187,18 @@ namespace SoftEvolution
             comando.Connection = cnConexion;
             dr = comando.ExecuteReader();
 
-            dr.Read();
+            if (dr.Read())
+            {
+                Folio = dr.GetInt32(0);
 
-            Folio = dr.GetInt32(0);
-
-            Cerrar();
-            return Folio;
+                Cerrar();
+                return Folio;
+            }
+            else
+            {
+                Cerrar();
+                return -1;
+            }
         }
 
         /// <summary>
@@ -245,6 +251,56 @@ namespace SoftEvolution
             }
 
 
+        }
+
+        public void RegistrarCompra(clsCompras objProducto)
+        {
+            //definición de variables y objetos a utilizar
+            string sql;
+            MySqlCommand cm;
+            Conectar(); //llamado al método conectar para hacer la conexión
+
+            cm = new MySqlCommand();//inicializacion del objeto
+            //se le pasan los parametros de todos los campos al objeto de la base de datos
+            cm.Parameters.AddWithValue("@codigo", objProducto.Codigo);
+            cm.Parameters.AddWithValue("@proveedor", objProducto.Proveedor);
+            cm.Parameters.AddWithValue("@fecha", objProducto.Fecha);
+            cm.Parameters.AddWithValue("@cantidad", objProducto.Cantidad);
+            cm.Parameters.AddWithValue("@total", objProducto.Total);
+            //ingresamos a la variable el escript de la base de datos
+            sql = "INSERT INTO compras (codigo, codigo_proveedor, fecha, cantidad, total) VALUES (@codigo, 1, @fecha, @cantidad, @total)";
+            //pasamos el escript para realizar la consulta
+            cm.CommandText = sql;
+            cm.CommandType = CommandType.Text;
+            cm.Connection = cnConexion;
+            cm.ExecuteNonQuery();//ejecuta el escript
+            Cerrar(); //cierra la conexión
+        }
+
+        public void RegistrarDetallesCompra(clsDetallesCompra objProducto)
+        {
+            //definición de variables y objetos a utilizar
+            string sql;
+            MySqlCommand cm;
+            Conectar(); //llamado al método conectar para hacer la conexión
+
+            cm = new MySqlCommand();//inicializacion del objeto
+            //se le pasan los parametros de todos los campos al objeto de la base de datos
+            cm.Parameters.AddWithValue("@codigoCompra", objProducto.Codigo_Compra);
+            cm.Parameters.AddWithValue("@codigoProducto", objProducto.Codigo_Producto);
+            cm.Parameters.AddWithValue("@producto", objProducto.Producto);
+            cm.Parameters.AddWithValue("@cantidad", objProducto.Cantidad);
+            cm.Parameters.AddWithValue("@compra", objProducto.Compra);
+            cm.Parameters.AddWithValue("@subtotal", objProducto.Subtotal);
+
+            //ingresamos a la variable el escript de la base de datos
+            sql = "INSERT INTO detalle_compra (codigo_compra, codigo_producto, producto, cantidad, precio_compra, subtotal) VALUES (@codigoCompra, @codigoProducto, @producto, @cantidad, @compra, @subtotal)";
+            //pasamos el escript para realizar la consulta
+            cm.CommandText = sql;
+            cm.CommandType = CommandType.Text;
+            cm.Connection = cnConexion;
+            cm.ExecuteNonQuery();//ejecuta el escript
+            Cerrar(); //cierra la conexión
         }
 
         # endregion

@@ -36,6 +36,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblFolio = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -47,18 +48,17 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblArticulos = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lstProductos = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstCodigo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstProducto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstCantidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstPrecioUnitario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lstSubtotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblArticulos = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,6 +131,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.txtCodigo);
             this.groupBox3.Controls.Add(this.label10);
@@ -141,6 +142,16 @@
             this.groupBox3.TabIndex = 39;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos Articulo:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(313, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.TabStop = false;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -158,7 +169,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(86, 40);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(221, 25);
-            this.txtCodigo.TabIndex = 7;
+            this.txtCodigo.TabIndex = 1;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             this.txtCodigo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCodigo_KeyUp);
             // 
@@ -177,8 +188,10 @@
             this.txtCantidad.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(509, 40);
             this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.ReadOnly = true;
             this.txtCantidad.Size = new System.Drawing.Size(120, 25);
-            this.txtCantidad.TabIndex = 9;
+            this.txtCantidad.TabIndex = 100;
+            this.txtCantidad.TabStop = false;
             this.txtCantidad.Text = "1";
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -215,7 +228,8 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.ReadOnly = true;
             this.txtApellido.Size = new System.Drawing.Size(367, 25);
-            this.txtApellido.TabIndex = 21;
+            this.txtApellido.TabIndex = 100;
+            this.txtApellido.TabStop = false;
             // 
             // txtPuesto
             // 
@@ -224,7 +238,8 @@
             this.txtPuesto.Name = "txtPuesto";
             this.txtPuesto.ReadOnly = true;
             this.txtPuesto.Size = new System.Drawing.Size(131, 25);
-            this.txtPuesto.TabIndex = 17;
+            this.txtPuesto.TabIndex = 100;
+            this.txtPuesto.TabStop = false;
             // 
             // label19
             // 
@@ -253,7 +268,62 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(230, 25);
-            this.txtNombre.TabIndex = 19;
+            this.txtNombre.TabIndex = 100;
+            this.txtNombre.TabStop = false;
+            // 
+            // lstProductos
+            // 
+            this.lstProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lstProductos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstCodigo,
+            this.lstProducto,
+            this.lstCantidad,
+            this.lstPrecioUnitario,
+            this.lstSubtotal});
+            this.lstProductos.GridLines = true;
+            this.lstProductos.Location = new System.Drawing.Point(140, 234);
+            this.lstProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.lstProductos.Name = "lstProductos";
+            this.lstProductos.Size = new System.Drawing.Size(948, 323);
+            this.lstProductos.TabIndex = 36;
+            this.lstProductos.TabStop = false;
+            this.lstProductos.UseCompatibleStateImageBehavior = false;
+            this.lstProductos.View = System.Windows.Forms.View.Details;
+            // 
+            // lstCodigo
+            // 
+            this.lstCodigo.Text = "Codigo";
+            this.lstCodigo.Width = 162;
+            // 
+            // lstProducto
+            // 
+            this.lstProducto.Text = "Producto";
+            this.lstProducto.Width = 445;
+            // 
+            // lstCantidad
+            // 
+            this.lstCantidad.Text = "Cantidad";
+            this.lstCantidad.Width = 107;
+            // 
+            // lstPrecioUnitario
+            // 
+            this.lstPrecioUnitario.Text = "P_Unitario";
+            this.lstPrecioUnitario.Width = 117;
+            // 
+            // lstSubtotal
+            // 
+            this.lstSubtotal.Text = "Total";
+            this.lstSubtotal.Width = 117;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(812, 60);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(60, 22);
+            this.lblTotal.TabIndex = 8;
+            this.lblTotal.Text = "$0.00";
             // 
             // groupBox1
             // 
@@ -269,16 +339,6 @@
             this.groupBox1.Size = new System.Drawing.Size(948, 99);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(812, 60);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(60, 22);
-            this.lblTotal.TabIndex = 8;
-            this.lblTotal.Text = "$0.00";
             // 
             // lblArticulos
             // 
@@ -311,58 +371,9 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "TOTAL:";
             // 
-            // lstProductos
-            // 
-            this.lstProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstProductos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.lstCodigo,
-            this.lstProducto,
-            this.lstCantidad,
-            this.lstPrecioUnitario,
-            this.lstSubtotal});
-            this.lstProductos.GridLines = true;
-            this.lstProductos.Location = new System.Drawing.Point(140, 234);
-            this.lstProductos.Margin = new System.Windows.Forms.Padding(4);
-            this.lstProductos.Name = "lstProductos";
-            this.lstProductos.Size = new System.Drawing.Size(948, 323);
-            this.lstProductos.TabIndex = 36;
-            this.lstProductos.UseCompatibleStateImageBehavior = false;
-            this.lstProductos.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Width = 0;
-            // 
-            // lstCodigo
-            // 
-            this.lstCodigo.Text = "Codigo";
-            this.lstCodigo.Width = 162;
-            // 
-            // lstProducto
-            // 
-            this.lstProducto.Text = "Producto";
-            this.lstProducto.Width = 445;
-            // 
-            // lstCantidad
-            // 
-            this.lstCantidad.Text = "Cantidad";
-            this.lstCantidad.Width = 107;
-            // 
-            // lstPrecioUnitario
-            // 
-            this.lstPrecioUnitario.Text = "P_Unitario";
-            this.lstPrecioUnitario.Width = 117;
-            // 
-            // lstSubtotal
-            // 
-            this.lstSubtotal.Text = "Total";
-            this.lstSubtotal.Width = 117;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmCompras
@@ -377,13 +388,12 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstProductos);
+            this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCompras";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCompras";
             this.Load += new System.EventHandler(this.frmCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -411,6 +421,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblFolio;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label10;
@@ -422,18 +433,17 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblArticulos;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListView lstProductos;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader lstCodigo;
         private System.Windows.Forms.ColumnHeader lstProducto;
         private System.Windows.Forms.ColumnHeader lstCantidad;
         private System.Windows.Forms.ColumnHeader lstPrecioUnitario;
         private System.Windows.Forms.ColumnHeader lstSubtotal;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblArticulos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Timer timer1;
     }
 }
