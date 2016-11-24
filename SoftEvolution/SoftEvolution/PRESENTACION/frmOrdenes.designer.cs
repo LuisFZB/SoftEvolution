@@ -32,17 +32,20 @@
             this.buscarOrdenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvOrden = new System.Windows.Forms.DataGridView();
             this.txtBus = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buscarOrdenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(479, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(616, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,9 +58,9 @@
             // dgvOrden
             // 
             this.dgvOrden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrden.Location = new System.Drawing.Point(12, 61);
+            this.dgvOrden.Location = new System.Drawing.Point(25, 82);
             this.dgvOrden.Name = "dgvOrden";
-            this.dgvOrden.Size = new System.Drawing.Size(452, 196);
+            this.dgvOrden.Size = new System.Drawing.Size(563, 151);
             this.dgvOrden.TabIndex = 1;
             // 
             // txtBus
@@ -70,11 +73,23 @@
             this.txtBus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBus_KeyPress);
             this.txtBus.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBus_KeyUp);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SoftEvolution.Properties.Resources.az22;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 287);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(617, 98);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmOrdenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 287);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(616, 384);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBus);
             this.Controls.Add(this.dgvOrden);
             this.Controls.Add(this.menuStrip1);
@@ -85,6 +100,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,6 +112,7 @@
         private System.Windows.Forms.ToolStripMenuItem buscarOrdenToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvOrden;
         private System.Windows.Forms.TextBox txtBus;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

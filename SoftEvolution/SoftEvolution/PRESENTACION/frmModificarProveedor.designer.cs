@@ -46,82 +46,90 @@
             this.tlsOpciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsActualizar = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsCancelar = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(93, 38);
+            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(78, 62);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(52, 15);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
             // 
             // lblEmpresa
             // 
             this.lblEmpresa.AutoSize = true;
-            this.lblEmpresa.Location = new System.Drawing.Point(46, 90);
+            this.lblEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpresa.Location = new System.Drawing.Point(78, 93);
             this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(87, 13);
+            this.lblEmpresa.Size = new System.Drawing.Size(118, 15);
             this.lblEmpresa.TabIndex = 1;
             this.lblEmpresa.Text = "Nombre empresa";
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(84, 146);
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(78, 130);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.Size = new System.Drawing.Size(63, 15);
             this.lblTelefono.TabIndex = 2;
             this.lblTelefono.Text = "Telefono";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(101, 205);
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(78, 167);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.Size = new System.Drawing.Size(44, 15);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email";
             // 
             // lblContacto
             // 
             this.lblContacto.AutoSize = true;
-            this.lblContacto.Location = new System.Drawing.Point(44, 265);
+            this.lblContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContacto.Location = new System.Drawing.Point(78, 203);
             this.lblContacto.Name = "lblContacto";
-            this.lblContacto.Size = new System.Drawing.Size(89, 13);
+            this.lblContacto.Size = new System.Drawing.Size(116, 15);
             this.lblContacto.TabIndex = 4;
             this.lblContacto.Text = "Nombre contacto";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(39, 327);
+            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Location = new System.Drawing.Point(78, 241);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(94, 13);
+            this.lblApellido.Size = new System.Drawing.Size(59, 15);
             this.lblApellido.TabIndex = 5;
-            this.lblApellido.Text = "Apellidos contacto";
+            this.lblApellido.Text = "Apellido";
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(149, 35);
+            this.txtCodigo.Location = new System.Drawing.Point(210, 57);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(69, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(52, 20);
             this.txtCodigo.TabIndex = 6;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // txtEmpresa
             // 
-            this.txtEmpresa.Location = new System.Drawing.Point(149, 87);
+            this.txtEmpresa.Location = new System.Drawing.Point(210, 92);
             this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(216, 20);
+            this.txtEmpresa.Size = new System.Drawing.Size(100, 20);
             this.txtEmpresa.TabIndex = 7;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(149, 143);
+            this.txtTelefono.Location = new System.Drawing.Point(210, 129);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 8;
@@ -129,50 +137,52 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(149, 202);
+            this.txtEmail.Location = new System.Drawing.Point(210, 166);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(216, 20);
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 9;
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // txtContacto
             // 
-            this.txtContacto.Location = new System.Drawing.Point(149, 262);
+            this.txtContacto.Location = new System.Drawing.Point(210, 202);
             this.txtContacto.Name = "txtContacto";
-            this.txtContacto.Size = new System.Drawing.Size(216, 20);
+            this.txtContacto.Size = new System.Drawing.Size(100, 20);
             this.txtContacto.TabIndex = 10;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(149, 324);
+            this.txtApellido.Location = new System.Drawing.Point(210, 240);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(216, 20);
+            this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 11;
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(149, 383);
+            this.txtObservaciones.Location = new System.Drawing.Point(210, 280);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(216, 72);
+            this.txtObservaciones.Size = new System.Drawing.Size(150, 81);
             this.txtObservaciones.TabIndex = 14;
             // 
             // lblObservaciones
             // 
             this.lblObservaciones.AutoSize = true;
-            this.lblObservaciones.Location = new System.Drawing.Point(55, 386);
+            this.lblObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservaciones.Location = new System.Drawing.Point(78, 281);
             this.lblObservaciones.Name = "lblObservaciones";
-            this.lblObservaciones.Size = new System.Drawing.Size(78, 13);
+            this.lblObservaciones.Size = new System.Drawing.Size(101, 15);
             this.lblObservaciones.TabIndex = 15;
             this.lblObservaciones.Text = "Observaciones";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsOpciones});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(433, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(419, 24);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -199,11 +209,24 @@
             this.tlsCancelar.Text = "Cancelar";
             this.tlsCancelar.Click += new System.EventHandler(this.tlsCancelar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SoftEvolution.Properties.Resources.az22;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 385);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(419, 86);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmModificarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 506);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(419, 472);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblObservaciones);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.txtApellido);
@@ -228,6 +251,7 @@
             this.Load += new System.EventHandler(this.frmModificarProveedor_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +277,6 @@
         private System.Windows.Forms.ToolStripMenuItem tlsOpciones;
         private System.Windows.Forms.ToolStripMenuItem tlsActualizar;
         private System.Windows.Forms.ToolStripMenuItem tlsCancelar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

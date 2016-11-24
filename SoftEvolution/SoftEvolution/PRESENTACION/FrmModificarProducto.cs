@@ -276,5 +276,10 @@ namespace SoftEvolution
             frmProductos prod = new frmProductos();
             prod.Show();
         }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
