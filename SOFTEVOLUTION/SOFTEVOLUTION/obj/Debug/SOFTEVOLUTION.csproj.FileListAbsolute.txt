@@ -1,0 +1,43 @@
+c:\users\cuen-\documents\visual studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\bin\Debug\SOFTEVOLUTION.exe.config
+c:\users\cuen-\documents\visual studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\bin\Debug\SOFTEVOLUTION.exe
+c:\users\cuen-\documents\visual studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\bin\Debug\SOFTEVOLUTION.pdb
+c:\users\cuen-\documents\visual studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.csprojResolveAssemblyReference.cache
+c:\users\cuen-\documents\visual studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmPrincipal.resources
+c:\users\cuen-\documents\visual studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.Properties.Resources.resources
+c:\users\cuen-\documents\visual studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.csproj.GenerateResource.Cache
+c:\users\cuen-\documents\visual studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.exe
+c:\users\cuen-\documents\visual studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.pdb
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmUsuarios.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmProductos.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmProveedores.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmReporteSemanal.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmCorteCaja.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmVentas.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmAgregarCompras.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmCompras.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmLogin.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmRemoverCompras.resources
+C:\Users\cuen-\Documents\Visual Studio 2013\Projects\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmOrdenes.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\bin\Debug\SOFTEVOLUTION.exe.config
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.exe
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.pdb
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\bin\Debug\SOFTEVOLUTION.exe
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\bin\Debug\SOFTEVOLUTION.pdb
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.csprojResolveAssemblyReference.cache
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmOrdenes.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmUsuarios.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmProductos.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmProveedores.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmReporteSemanal.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmCorteCaja.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmVentas.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmAgregarCompras.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmCompras.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmLogin.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmPrincipal.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmRemoverCompras.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.Properties.Resources.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.csproj.GenerateResource.Cache
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.frmInventario.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.PRESENTACION.Eduardo_Gmz.frmAgregarVentas.resources
+C:\Users\cuen-\Desktop\EVOLUTION GYM\SOFTEVOLUTION\SOFTEVOLUTION\obj\Debug\SOFTEVOLUTION.PRESENTACION.Eduardo_Gmz.frmRemoverVentas.resources
